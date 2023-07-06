@@ -8,27 +8,18 @@
     height: 8rem;
     border-radius: 60px;
   }
-  
-  #loginimagen2{
-    height: 1rem;
-  }
+
   
   #user {
     height: 35px ;
   }
   
-  #user2 {
-    height: 1rem ;
-  }
   
   #password{
     height: 35px;
     padding: 7px;
   }
   
-  #password2{
-    height: 1rem;
-  }
   
   #iniciarsesion {
     background-color: #e23636;
@@ -38,18 +29,11 @@
   #div-o{
     height: 1rem;
   }
-  #div-o2{
-    height: 1rem;
-  }
-  
-  
+ 
   #googleicon{
     height: 1.6rem;
   }
-  #googleicon2{
-    height: 1.6rem;
-  }
-  
+
   #iniciarsesion:hover{
     background: #1a2074;
     box-shadow: #2b2a2a 0 5px 5px;
@@ -57,4 +41,8 @@
   #exit{
     display: flex;
     justify-content: end !important;
+  }
+
+  main{
+    padding: 70px;
   }
