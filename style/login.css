@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+}
 #modal {
     background-image: url(/imagenes/fondo.jpeg);
     background-position: center ;
@@ -41,8 +46,4 @@
   #exit{
     display: flex;
     justify-content: end !important;
-  }
-
-  main{
-    padding: 70px;
   }
