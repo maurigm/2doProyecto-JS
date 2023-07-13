@@ -21,12 +21,13 @@ formulario.addEventListener("submit", function (e) {
   var Mayuscula = /[A-Z]/;
 
   if (nombre === "" || apellido === "" || email === "" || contrasena === "" || confirmarContrasena === "") {
-    camposError.innerHTML = `<h6 class="text-center text-danger text-uppercase border-light ">${"Favor de completar todo los campos"}</h6>`;
+    camposError.innerHTML = `<p class="p-3 mb-2 bg-danger text-white rounded-start mt-3 ml-5 mr-5">Porfavor completar todos los campos</p>`;
     return
   }
+  else camposError.innerHTML = ""
 
   if (contrasena !== confirmarContrasena) {
-    passError.innerHTML = `<h6 class="text-center text-danger text-uppercase border-light ">${"Las contraseñas no coinciden"}</h6>`;
+    passError.innerHTML = `<p class="p-3 mb-2 bg-danger text-white rounded-start mt-3 ml-5 mr-5">Las contraseñas no coinciden</p>`;
     return; // Detener la ejecución del código
   }
   else passError.innerHTML = ""
@@ -35,13 +36,13 @@ formulario.addEventListener("submit", function (e) {
   if (contrasena.length > 5 && contrasena.length < 16 &&
     confirmarContrasena.length > 5 && confirmarContrasena.length < 16) {
   } else {
-    passError.innerHTML = `<h6 class="text-center text-danger text-uppercase border-light ">${"Las contraseñas no cumplen con los requisitos"}</h6>`;
+    passError.innerHTML = `<p class="p-3 mb-2 bg-danger text-white rounded-start mt-3 ml-5 mr-5">Las contraseñas no cumplen con los requisitos</p>`;
     return
   }
   if (Mayuscula.test(contrasena) && Mayuscula.test(confirmarContrasena)) {
     console.log("las contraseñas son validas");
   }
-  else return passError.innerHTML = `<h6 class="text-center text-danger text-uppercase border-light ">${"Las contraseñas no cumplen con los requisitos"}</h6>`
+  else return passError.innerHTML = `<p class="p-3 mb-2 bg-danger text-white rounded-start mt-3 ml-5 mr-5">Las contraseñas no cumplen con los requisitos</p>`
 
 
   // Crear un objeto con los datos ingresados
