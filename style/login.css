@@ -3,6 +3,10 @@
   padding: 0;
   font-family: 'Roboto Condensed', sans-serif;
 }
+body{
+background-image: url(/images/templo.jpg);
+}
+
 #modal {
     background-image: url(/imagenes/fondo.jpeg);
     background-position: center ;
@@ -46,4 +50,16 @@
   #exit{
     display: flex;
     justify-content: end !important;
+  }
+
+  #registroForm{
+    margin-left: 20px;
+    margin-right: 50px;
+    padding: 50px;
+    border-radius: 30px;
+  }
+
+  .registrate{
+    margin-top: 100px;
+    margin-left: 10%;
   }

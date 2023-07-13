@@ -10,7 +10,7 @@
     <title>Cobra Kai</title>
 </head>
 
-<body class="bg-dark-subtle">
+<body>
     <header>
         <nav class="navbar navbar-expand-md navbar-dark bg-dark bg-opacity-50 fixed-top p-0">
             <div class="container-fluid">
@@ -51,28 +51,36 @@
             </div>
         </nav>
     </header>
-    <div class="container mt-5">
+    <div class="registrate"><h1>Registrate</h1></div>
+    <div class="container">
         <form id="registroForm">
             <div>
-                <label for="nombre" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="nombre" maxlength="30">
+                <label for="nombre" class="form-label fw-bold fs-5">Nombre</label>
+                <input type="text" class="form-control text-wrap" id="nombre" placeholder="Nombre" maxlength="30">
             </div>
-            <label for="apellido" class="form-label">apellido</label>
-            <input type="text" class="form-control" id="apellido" maxlength="30">
+            <label for="apellido" class="form-label fw-bold fs-5">apellido</label>
+            <input type="text" class="form-control text-wrap" placeholder="apellido" id="apellido" maxlength="30">
             <div class="mb-3">
-                <label for="email" class="form-label">Ingrese su email</label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
-            </div>
-            <div class="mb-3">
-                <label for="contrasena" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="contrasena">
+                <label for="email" class="form-label fw-bold fs-5">Ingrese su email</label>
+                <input type="email" class="form-control text-wrap" id="email" aria-describedby="emailHelp" placeholder="ingrese su email">
             </div>
             <div class="mb-3">
-                <label for="confirmarContrasena" class="form-label">Confirmar contraseña</label>
-                <input type="password" class="form-control" id="confirmarContrasena">
+                <label for="contrasena" class="form-label fw-bold fs-5">Contraseña</label>
+                <input type="password" class="form-control text-wrap" id="contrasena" placeholder="Minimo de 5 caracteres y maximo de 16 y almenos 1 mayuscula">
             </div>
-            <button type="submit" class="btn btn-primary" id="botonContinuar">Continuar</button>
+            <div class="mb-3">
+                <label for="confirmarContrasena" class="form-label fw-bold fs-5">Confirmar contraseña</label>
+                <input type="password" class="form-control text-wrap" id="confirmarContrasena" placeholder="Minimo de 5 caracteres y maximo de 16 y almenos 1 mayuscula">
+            </div>
+            <button type="submit" class="btn btn-dark" id="botonContinuar">Continuar</button>
         </form>
+        <div id="passError">
+            <!-- <p>Las contraseñas no coinciden</p> -->
+        </div>
+
+        <div id="camposError">
+            <!-- <p>Por favor complete todos los campos</p> -->
+        </div>
     </div>
 
 
