@@ -50,7 +50,8 @@ formulario.addEventListener("submit", function (e) {
     nombre: nombre,
     apellido: apellido,
     email: email,
-    contrasena: contrasena
+    contrasena: contrasena,
+    administrador : 1,
   };
 
   // Agregar el objeto al array de registros

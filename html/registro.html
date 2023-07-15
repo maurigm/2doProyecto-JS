@@ -3,10 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/registro.css">
     <link rel="stylesheet" href="/style/login.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <title>Cobra Kai</title>
 </head>
 
@@ -51,7 +53,9 @@
             </div>
         </nav>
     </header>
-    <div class="registrate"><h1>Registrate</h1></div>
+    <div class="registrate">
+        <h1>Registrate</h1>
+    </div>
     <div class="container">
         <form id="registroForm">
             <div>
@@ -62,15 +66,18 @@
             <input type="text" class="form-control text-wrap" placeholder="apellido" id="apellido" maxlength="30">
             <div class="mb-3">
                 <label for="email" class="form-label fw-bold fs-5">Ingrese su email</label>
-                <input type="email" class="form-control text-wrap" id="email" aria-describedby="emailHelp" placeholder="ingrese su email">
+                <input type="email" class="form-control text-wrap" id="email" aria-describedby="emailHelp"
+                    placeholder="ingrese su email" maxlength="30">
             </div>
             <div class="mb-3">
                 <label for="contrasena" class="form-label fw-bold fs-5">Contraseña</label>
-                <input type="password" class="form-control text-wrap" id="contrasena" placeholder="Minimo de 5 caracteres y maximo de 16 y almenos 1 mayuscula">
+                <input type="password" class="form-control text-wrap" id="contrasena"
+                    placeholder="Minimo de 5 caracteres y maximo de 16 y almenos 1 mayuscula">
             </div>
             <div class="mb-3">
                 <label for="confirmarContrasena" class="form-label fw-bold fs-5">Confirmar contraseña</label>
-                <input type="password" class="form-control text-wrap" id="confirmarContrasena" placeholder="Minimo de 5 caracteres y maximo de 16 y almenos 1 mayuscula">
+                <input type="password" class="form-control text-wrap" id="confirmarContrasena"
+                    placeholder="Minimo de 5 caracteres y maximo de 16 y almenos 1 mayuscula">
             </div>
             <button type="submit" class="btn btn-dark" id="botonContinuar">Continuar</button>
         </form>

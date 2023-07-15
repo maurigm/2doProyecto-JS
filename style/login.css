@@ -3,10 +3,6 @@
   padding: 0;
   font-family: 'Roboto Condensed', sans-serif;
 }
-body{
-background-image: url(/images/templo.jpg);
-}
-
 #modal {
     background-image: url(/imagenes/fondo.jpeg);
     background-position: center ;
@@ -30,11 +26,6 @@ background-image: url(/images/templo.jpg);
   }
   
   
-  #iniciarsesion {
-    background-color: #e23636;
-  
-  }
-  
   #div-o{
     height: 1rem;
   }
@@ -43,23 +34,7 @@ background-image: url(/images/templo.jpg);
     height: 1.6rem;
   }
 
-  #iniciarsesion:hover{
-    background: #1a2074;
-    box-shadow: #2b2a2a 0 5px 5px;
-  }
   #exit{
     display: flex;
     justify-content: end !important;
-  }
-
-  #registroForm{
-    margin-left: 20px;
-    margin-right: 50px;
-    padding: 50px;
-    border-radius: 30px;
-  }
-
-  .registrate{
-    margin-top: 100px;
-    margin-left: 10%;
   }
