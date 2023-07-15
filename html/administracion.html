@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style/login.css">
+    <link rel="stylesheet" href="/style/styleadmin.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Cobra Kai</title>
 </head>
 
@@ -54,8 +55,44 @@
           </nav>
     </header>
     <main>
+        <h1>Administración de Productos</h1>
 
-        <!-- Contenido de la pagina -->
+        <button class="btn btn-outline-secondary btn-sm" id="add-product-btn">+ Añadir Producto</button>
+        <table class="table table-dark table-striped mt-3">
+          <thead>
+            <tr>
+              <th>Código</th>
+              <th>Nombre</th>
+              <th>Precio</th>
+              <th>Imagen</th>
+              <th>Stock</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="product-list">
+            <!-- Aquí se insertarán las filas de productos -->
+          </tbody>
+        </table>
+        <div id="add-product-modal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Añadir Producto</h2>
+            <form id="add-product-form" class="d-flex flex-column align-items-center">
+              <label for="product-code">Código de Producto:</label>
+              <input type="text" id="product-code" readonly>
+              <label for="product-name">Nombre del Producto:</label>
+              <input type="text" id="product-name" required>
+              <label for="insert-image">Insertar Imagen:</label>
+              <input type="text" id="insert-image" required>
+              <label for="product-stock">Stock:</label>
+              <input type="text" id="product-stock" required>
+              <label for="product-price">Precio del Producto:</label>
+              <input type="text" id="product-price" required>
+              <button class="btn btn-outline-secondary btn-sm" type="submit">Añadir</button>
+            </form>
+          </div>
+        </div>
+
 
     </main>
 
@@ -183,6 +220,7 @@
         crossorigin="anonymous"></script>
         <script src="/js/login.js"></script>
         <script src="/js/registro.js"></script>
+        <script src="/js/adminjs.js" defer></script>
 </body>
 
 </html>
