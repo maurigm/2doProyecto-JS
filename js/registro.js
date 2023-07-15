@@ -1,4 +1,14 @@
-let datosUser = [];
+let datosUser = JSON.parse (localStorage.getItem("userDatos"));
+
+// let datosAdmin = {nombre:"admin", apellido:"istrador", email: "ninjaAdmin@gmail.com", contrasena: "Ninja1234", administrador:0 };
+
+// datosUser.push(datosAdmin);
+// localStorage.setItem('userDatos', JSON.stringify(datosUser));
+
+if (datosUser === null ) {
+  datosUser = [];
+}
+
 
 let formulario = document.getElementById("registroForm");
 

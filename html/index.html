@@ -26,8 +26,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-lg-0 d-flex align-items-center fw-bold">
-            <li class="nav-item">
-              <a class="nav-link" href="/html/administracion.html">Administracion</a>
+            <li class="nav-item" id="administracion">
+              <a class="nav-link d-none" href="/html/administracion.html">Administracion</a>
             </li>
             <li class="nav-item ">
               <a class="nav-link" href="/html/nosotros.html">Nosotros</a>
@@ -45,6 +45,9 @@
               <!-- Botón MODAL -->
               <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" id="ingresar"><img
                   src="/images/login.png" class="iconos-navbar" alt="login"></button>
+            </li>
+            <li class="nav-item" id="cerrarSesion">
+              <a class="nav-link d-none" href="/html/index.html">Cerrar sesion</a>
             </li>
           </ul>
         </div>
@@ -319,6 +322,7 @@
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="https://kit.fontawesome.com/cae5aa21ab.js" crossorigin="anonymous"></script>
   <script src="/js/login.js"></script>
+  <script src="/js/registro.js"></script>
 </body>
 
 </html>

@@ -1,17 +1,20 @@
-let adminUser = { email: "ninjaAdmin@gmail.com", contrasena: "Ninja1234" };
+let sesion =(localStorage.getItem(`sesion`));
 
-
+if (sesion === null) {
+    sesion = "cerrado";
+}
 
 let datosUsuariosLog = JSON.parse(localStorage.getItem(`userDatos`));
 
 const inputEmail = document.getElementById("loginUsuario");
 const inputContrasena = document.getElementById("loginContrasena");
 const botonEnviar = document.getElementById("btnIniciarSesion");
+const cerrarSesion = document.getElementById("cerrarSesion");
 
+const administracion = document.getElementById("administracion");
 
 document.getElementById("formularioLog").addEventListener("submit", function (event) {
-    event.preventDefault();
-    verificarUsuario();
+    verificarUsuario(event);
 });
 
 // botonEnviar.addEventListener("submit",function (e) {
@@ -19,18 +22,17 @@ document.getElementById("formularioLog").addEventListener("submit", function (ev
 //     verificarUsuario();
 // });
 
-function verificarUsuario() {
+function verificarUsuario(event) {
     let existencia = 0;
 
     for (const usuario of datosUsuariosLog) {
         if (usuario.email === inputEmail.value) {
             if (usuario.contrasena === inputContrasena.value) { // aqui ingresa el usuario
-                alert("ingreso exitoso");
 
-
+                comprobacionAdministrador(usuario.administrador);
             } else {
                 alert("La contraseña del usuario no es correcta")
-
+                event.preventDefault();
             }
             existencia = 1;
         }
@@ -38,13 +40,46 @@ function verificarUsuario() {
     }
     if (existencia === 0 ) {
         alert("El usuario no existe")
+        event.preventDefault();
     }
 }
 
+function mostrarLink () {
+    administracion.innerHTML = `<a class="nav-link" href="/html/administracion.html">Administracion</a>`
+}
+
+function comprobacionAdministrador(valor) {
+    if (valor === 0) {
+        mostrarLink();
+        alert("bienvenido administrador");
+        sesion = "abierto administrador"
+    }
+    else{
+        alert("ingreso exitoso");
+        sesion = "abierto usuario"
+    }
+    localStorage.setItem("sesion",sesion)
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+    if (sesion !== "cerrado") {
+        if (sesion === "abierto administrador") {
+            administracion.innerHTML = `<a class="nav-link" href="/html/administracion.html">Administracion</a>`
+        }
+        cerrarSesion.innerHTML = `<a class="nav-link" href="/html/index.html">Cerrar sesion</a>`
+    }
+})
+
+cerrarSesion.addEventListener("click",()=>{
+    sesion = "cerrado"
+    localStorage.setItem("sesion",sesion)
+})
+
+
+// evento recarga de pagina controlar si hay inicio de sesion
+// si hay inicio de sesion crear link cerrar sesion
+// comprobacion si es admin o no
 
 
 
-// verificar que los campos esten completados de forma correcta (email,contraseña)
-
-// verificar si las credenciales coinciden
 
