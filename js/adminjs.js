@@ -143,7 +143,7 @@ function eliminarProducto(row) {
           index = i;
         }
       }
-      
+
       productos.splice(index, 1);
       let productosString = JSON.stringify(productos)
       localStorage.setItem("productos", productosString);
@@ -183,24 +183,24 @@ document.addEventListener("DOMContentLoaded", () => {
 const tablaInicio = () => {
   for (const producto of productos) {
     const newRow = tablaProductos.insertRow();
-  
+
     const celdaCodigo = newRow.insertCell(0);
     const celdaNombre = newRow.insertCell(1);
     const celdaPrecio = newRow.insertCell(2);
     const celdaImagen = newRow.insertCell(3);
     const celdaStock = newRow.insertCell(4);
-    
-    celdaCodigo.innerHTML = producto.id;      
-    celdaNombre.innerHTML = producto.nombre;      
+
+    celdaCodigo.innerHTML = producto.id;
+    celdaNombre.innerHTML = producto.nombre;
     celdaPrecio.innerHTML = producto.precio;
-    celdaImagen.innerHTML = producto.imagen;      
+    celdaImagen.innerHTML = producto.imagen;
     celdaStock.innerHTML = producto.stock;
 
 
     const celdaBotones = newRow.insertCell(5);
     celdaBotones.innerHTML = `
-    <button class="btn btn-outline-warning btn-sm" onclick="activarModoEditar(this.parentNode.parentNode)">Editar</button>
-    <button class="btn btn-outline-danger btn-sm" onclick="eliminarProducto(this.parentNode.parentNode)">Eliminar</button>
+    <button class="btn btn-warning btn-sm my-1" onclick="activarModoEditar(this.parentNode.parentNode)">Editar</button>
+    <button class="btn btn-danger btn-sm" onclick="eliminarProducto(this.parentNode.parentNode)">Eliminar</button>
     <span class="favorite-btn" onclick="favorito(this)">&#9734;</span>
     `;
   }
@@ -224,7 +224,7 @@ const nuevoProducto = (idProducto, nombreProducto, precioProducto, imagenProduct
   localStorage.setItem("productos", productosString);
 }
 // objeto (id, nombre, precio, imagen, stock)
-  
+
 
 // Funcion para almacenar productos editados
 const almacenarProductoEditado = (idProducto, nombreProducto, precioProducto, imagenProducto, stockProducto) =>{
@@ -237,7 +237,7 @@ const almacenarProductoEditado = (idProducto, nombreProducto, precioProducto, im
       producto.stock = stockProducto;
     }
   }
-  
+
   let productosString = JSON.stringify(productos)
   localStorage.setItem("productos", productosString);
 }
