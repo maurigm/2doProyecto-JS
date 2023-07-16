@@ -1,4 +1,3 @@
-// Obtener referencia a elementos del DOM
 const addProductBtn = document.getElementById('add-product-btn');
 const modal = document.getElementById('add-product-modal');
 const closeBtn = document.getElementsByClassName('close')[0];
