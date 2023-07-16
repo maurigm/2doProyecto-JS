@@ -2,350 +2,327 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <link rel="stylesheet" href="/style/login.css">
-    <link rel="stylesheet" href="/style/styleropa.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" >
-        <title>Cobra Kai</title>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style/login.css">
+  <link rel="stylesheet" href="/style/styleropa.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <title>Cobra Kai</title>
 </head>
 
 <body class="bg-dark-subtle">
-    <header>
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark bg-opacity-50 fixed-top p-0">
-            <div class="container-fluid">
-                <a class="navbar-brand p-0 d-flex" href="/html/index.html">
-                    <img src="/images/logo cobrakai.png" style="width: 40px; height: 40px;"
-                        class="d-inline-block align-items-center">
-                    <h1 class="m-0 ps-2 pt-2 pt-md-0">Cobra Kai</h1>
-                </a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-lg-0 d-flex align-items-center fw-bold">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/html/administracion.html">Administracion</a>
-                        </li>
-                        <li class="nav-item ">
-                            <a class="nav-link" href="/html/nosotros.html">Nosotros</a>
-                        </li>
-                        <form class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="Buscar producto"
-                                aria-label="Search" required>
-                            <button class="btn btn-outline-ligh me-1 p-0" type="submit"><img src="/images/buscar.png"
-                                    class="iconos-navbar" alt="buscar"></button>
-                        </form>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/html/carrito.html"><img src="/images/carrito2.png"
-                                    class="iconos-navbar" alt="Comprar"></a>
-                        </li>
-                        <li class="nav-item">
-                            <!-- Botón MODAL -->
-                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                id="ingresar"><img src="/images/login.png" class="iconos-navbar" alt="login"></button>
-                        </li>
-                    </ul>
-                </div>
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark bg-opacity-50 fixed-top p-0">
+      <div class="container-fluid">
+        <a class="navbar-brand p-0 d-flex" href="/html/index.html">
+          <img src="/images/logo cobrakai.png" style="width: 40px; height: 40px;"
+            class="d-inline-block align-items-center">
+          <h1 class="m-0 ps-2 pt-2 pt-md-0">Cobra Kai</h1>
+        </a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-lg-0 d-flex align-items-center fw-bold">
+            <li class="nav-item" id="administracion">
+              <a class="nav-link d-none" href="/html/administracion.html">Administracion</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="/html/nosotros.html">Nosotros</a>
+            </li>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Buscar producto" aria-label="Search" required>
+              <button class="btn btn-outline-ligh me-1 p-0" type="submit"><img src="/images/buscar.png"
+                  class="iconos-navbar" alt="buscar"></button>
+            </form>
+            <li class="nav-item">
+              <a class="nav-link" href="/html/carrito.html"><img src="/images/carrito2.png" class="iconos-navbar"
+                  alt="Comprar"></a>
+            </li>
+            <li class="nav-item">
+              <!-- Botón MODAL -->
+              <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" id="ingresar"><img
+                  src="/images/login.png" class="iconos-navbar" alt="login"></button>
+            </li>
+            <li class="nav-item" id="cerrarSesion">
+              <a class="nav-link d-none" href="/html/index.html">Cerrar sesion</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="containerc" id="container">
+      <div class="preloader">
+        <p>Strike first Strike hard No Mercy</p>
+      </div>
+    </div>
+    <div>
+      <video src="/images/video inicio2.mp4" autoplay loop class="videoFondo"></video>
+      <section class="main">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-6"></div>
+          </div>
+        </div>
+      </section>
+      <hr>
+      <div class="section-container">
+        <div class="columns image">
+          <video src="/images/video prox.mp4" width="90%" autoplay loop></video>
+        </div>
+        <div class="columns content">
+          <div class="content-container">
+            <h5 class="proximamente">Próximamente</h5>
+            <p class="texto">
+              ¡Presentando Cobra Kai Kimonos: tu destino para obtener conjuntos exclusivos de kimonos inspirados en la
+              exitosa serie Cobra Kai! Próximamente en agosto de este año, nuestro emocionante eCommerce llegará para
+              brindarte una experiencia de compra única y auténtica.
+            </p>
+            <p class="texto">
+              En Cobra Kai Kimonos, nos enorgullece ofrecerte ediciones limitadas de conjuntos de ropa que capturan la
+              esencia y el estilo de Cobra Kai. Diseñados cuidadosamente con atención a los detalles, nuestros productos
+              te permitirán lucir como un verdadero luchador y mostrar tu pasión por la serie.
+            </p>
+            <p class="texto">
+              Estamos emocionados de dar vida a Cobra Kai Kimonos y esperamos que te unas a nosotros en esta emocionante
+              aventura. Estate atento, ¡pronto podrás explorar nuestra tienda en línea y ser uno de los pocos
+              afortunados en poseer una de nuestras ediciones limitadas de conjuntos de kimonos!
+            </p>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="contenedorCards">
+        <div class="container2">
+          <div class="card">
+            <div class="imgBx">
+              <img src="/images/testing.png" alt="Kimono Edicion Blanca">
             </div>
-        </nav>
-    </header>
-    <main>
-        <div class="containerc" id="container">
-            <div class="preloader">
-              <p>Strike first Strike hard No Mercy</p>
+            <div class="contentBx">
+              <h2>Kimono Blanco</h2>
+              <div class="size">
+                <h3>Size:</h3>
+                <span>S</span>
+                <span>M</span>
+                <span>L</span>
+                <span>XL</span>
+              </div>
+              <a href="#"><button type="button" class="item-button addToCart comprarButtonIndex">
+                  Comprar
+                </button></a>
             </div>
           </div>
-          <div>
-            <video
-              src="/images/video inicio2.mp4"
-              autoplay
-              loop
-              class="videoFondo"
-            ></video>
-            <section class="main">
-              <div class="container">
-                <div class="row">
-                  <div class="col-sm-12 col-md-6"></div>
-                </div>
-              </div>
-            </section>
-            <hr >
-            <div class="section-container">
-              <div class="columns image">
-                <video
-                  src="/images/video prox.mp4"
-                  width="90%"
-                  autoplay
-                  loop
-                ></video>
-              </div>
-              <div class="columns content">
-                <div class="content-container">
-                  <h5 class="proximamente">Próximamente</h5>
-                  <p class="texto">
-                    ¡Presentando Cobra Kai Kimonos: tu destino para obtener conjuntos exclusivos de kimonos inspirados en la exitosa serie Cobra Kai! Próximamente en agosto de este año, nuestro emocionante eCommerce llegará para brindarte una experiencia de compra única y auténtica.
-                  </p>
-                  <p class="texto">
-                    En Cobra Kai Kimonos, nos enorgullece ofrecerte ediciones limitadas de conjuntos de ropa que capturan la esencia y el estilo de Cobra Kai. Diseñados cuidadosamente con atención a los detalles, nuestros productos te permitirán lucir como un verdadero luchador y mostrar tu pasión por la serie.
-                  </p>
-                  <p class="texto">
-                    Estamos emocionados de dar vida a Cobra Kai Kimonos y esperamos que te unas a nosotros en esta emocionante aventura. Estate atento, ¡pronto podrás explorar nuestra tienda en línea y ser uno de los pocos afortunados en poseer una de nuestras ediciones limitadas de conjuntos de kimonos!
-                  </p>
-                </div>
-              </div>
+        </div>
+        <div class="container2">
+          <div class="card">
+            <div class="imgBx">
+              <img src="/images/testing.png" alt="remeraWestlakeVerde">
             </div>
-            <hr>
-            <div class="contenedorCards">
-              <div class="container2">
-                <div class="card">
-                  <div class="imgBx">
-                    <img
-                      src="/images/testing.png"
-                      alt="Kimono Edicion Blanca"
-                    >
-                  </div>
-                  <div class="contentBx">
-                    <h2>Kimono Blanco</h2>
-                    <div class="size">
-                      <h3>Size:</h3>
-                      <span>S</span>
-                      <span>M</span>
-                      <span>L</span>
-                      <span>XL</span>
-                    </div>
-                    <a href="#"
-                      ><button type="button" class="item-button addToCart comprarButtonIndex">
-                        Comprar
-                      </button></a
-                    >
-                  </div>
-                </div>
+            <div class="contentBx">
+              <h2>Kimono negro</h2>
+              <div class="size">
+                <h3>Size:</h3>
+                <span>S</span>
+                <span>M</span>
+                <span>L</span>
+                <span>XL</span>
               </div>
-              <div class="container2">
-                <div class="card">
-                  <div class="imgBx">
-                    <img
-                      src="/images/testing.png"
-                      alt="remeraWestlakeVerde"
-                    >
-                  </div>
-                  <div class="contentBx">
-                    <h2>Kimono negro</h2>
-                    <div class="size">
-                      <h3>Size:</h3>
-                      <span>S</span>
-                      <span>M</span>
-                      <span>L</span>
-                      <span>XL</span>
-                    </div>
-                    <a href="#"
-                      ><button type="button" class="item-button addToCart comprarButtonIndex">
-                        Comprar
-                      </button></a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="container2">
-                <div class="card">
-                  <div class="imgBx">
-                    <img
-                      src="/images/testing.png"
-                      alt="remeraMalibuAmarilla"
-                    >
-                  </div>
-                  <div class="contentBx">
-                    <h2>Malibu</h2>
-                    <div class="size">
-                      <h3>Size:</h3>
-                      <span>S</span>
-                      <span>M</span>
-                      <span>L</span>
-                      <span>XL</span>
-                    </div>
-                    <a href="#"
-                      ><button type="button" class="item-button addToCart comprarButtonIndex">
-                        Comprar
-                      </button></a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="container2">
-                <div class="card">
-                  <div class="imgBx">
-                    <img src="/images/testing.png" alt="remeraTyrwhitt" >
-                  </div>
-                  <div class="contentBx">
-                    <h2>Tyrwhitt</h2>
-                    <div class="size">
-                      <h3>Size:</h3>
-                      <span>S</span>
-                      <span>M</span>
-                      <span>L</span>
-                      <span>XL</span>
-                    </div>
-                    <a href="#"
-                      ><button type="button" class="item-button addToCart comprarButtonIndex">
-                        Comprar
-                      </button></a
-                    >
-                  </div>
-                </div>
-              </div>
+              <a href="#"><button type="button" class="item-button addToCart comprarButtonIndex">
+                  Comprar
+                </button></a>
             </div>
-            <hr>
-            <br >
-            <hr >
           </div>
-
-
-
-
-
-    </main>
-
-    <footer>
-        <div class="container-fluid text-center ">
-            <div class="row p-3 pb-2 bg-dark bg-opacity-25 text-white">
-                <div class=" col-md-4 pb-4">
-                    <h5>Soporte</h5>
-                    <div class="mb-3"> <a class="text-white text-decoration-none" href="/html/404.html"
-                            target="_blank">Centro de ayuda</a> </div>
-                    <div class="mb-3"> <a class="text-white text-decoration-none" href="/html/404.html"
-                            target="_blank">Importaciones</a> </div>
-                    <div class="mb-3"> <a class="text-white text-decoration-none" href="/html/404.html"
-                            target="_blank">Chat de asistencia</a> </div>
-                </div>
-                <div class=" col-md-4 pb-4">
-                    <h3>Cobra Kai</h3>
-                    <p class="">Gral. Paz 576, San Miguel de Tucuman 4000</p>
-                    <div class="row d-flex justify-content-evenly px-sm-5 px-md-0"> <a href="https://www.facebook.com/"
-                            class="btn  col-2 rounded-pill   " target="_blank"><img src="/images/facebook.png"
-                                alt="enlace a facebook"></a>
-                        <a href="https://www.instagram.com/" class="btn  col-2 rounded-pill  " target="_blank"><img
-                                src="/images/instagram.png" alt="enlace a instagram"></a>
-                        <a href="https://ar.linkedin.com/" class="btn  col-2 rounded-pill  " target="_blank"><img
-                                src="/images/linkedin.png" alt="enlace a linkedin"></a>
-                        <a href="https://twitter.com/home" class="btn  col-2 rounded-pill  " target="_blank"><img
-                                src="/images/twitter.png" alt="enlace a twitter"></a>
-                    </div>
-                </div>
-                <div class=" col-md-4 pb-4">
-                    <h5>Enlaces</h5>
-                    <div class="mb-3"> <a class="text-white text-decoration-none" href="/html/404.html"
-                            target="_blank">Terminos y condiciones</a> </div>
-                    <div class="mb-3"> <a class="text-white text-decoration-none" href="/html/404.html"
-                            target="_blank">Politica de privacidad</a> </div>
-                    <div class="mb-3"> <a class="text-white text-decoration-none" href="/html/404.html"
-                            target="_blank">Noticias tecnologicas</a> </div>
-                </div>
-                <div>
-                    <p class="text-white  d-flex align-items-center justify-content-center"><img
-                            src="/images/copyright.png" alt="logo copyright">Copyright - All rights reserved 2023</p>
-                </div>
-            </div>
         </div>
-    </footer>
-
-    <!----------------------------------------MODAL----------------------------------------------- -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog ">
-            <div class="modal-content">
-                <div class="modal-body p-2 rounded-3 d-flex justify-content-center align-items-center flex-column vh=100 "
-                    id="modal">
-                    <div class="position-absolute top-0 end-0 ">
-                        <button type="button" class="btn-close mt-3 me-4 bg-white " data-bs-dismiss="modal"
-                            aria-label="Close"></button>
-                    </div>
-                    <div class=" bg-white p-3 rounded-3 text-secondary shadow-sm m-3 w-75">
-                        <div class="d-flex justify-content-center ">
-                            <img src="/images/iron.png" alt="login icon" id="loginimagen">
-                        </div>
-
-                        <div class="text-center fs-1 fw-bold">Login</div>
-
-                        <div class="input-group mt-4 needs-validation">
-
-                            <div class="input-group-text ">
-                                <img src="/images/user2.png" alt="user name" id="user">
-                            </div>
-                            <input type="text" class="form-control" required placeholder="Usuario">
-
-                            <div class="input-group mt-1">
-                                <div class="input-group-text">
-                                    <img src="/images/password.png" alt="password icon" id="password">
-                                </div>
-                                <input class="form-control" type="password" placeholder="Contraseña">
-                            </div>
-                            <div class="row mb-4">
-                                <div class="col d-flex justify-content-center">
-                                    <!-- Checkbox -->
-                                    <div class="form-check mt-3">
-                                        <input class="form-check-input" type="checkbox" value="" id="form2Example34">
-                                        <label class="form-check-label" for="form2Example34"> Recordar </label>
-                                    </div>
-                                </div>
-
-                                <div class="col mt-3">
-                                    <a href="#" class="text-decoration-none  text-secondary fw-semibold fst-italic pt-1"
-                                        id="contrasena">¿Olvidaste tu contraseña?</a>
-                                </div>
-                            </div>
-                            <div class="btn d-grid gap-2 col-6 mx-auto text-white w-50  mt-2 fw-semibold shadow-sm"
-                                type="submit" id="iniciarsesion">
-                                <a href="404.html" class="text-decoration-none text-white fw-bold ">Iniciar sesion</a>
-                            </div>
-                        </div>
-
-                        <div class="d-flex flex-column align-items-center mt-2 ">
-                            <div>¿No tienes una cuenta?</div>
-                            <div>
-                                <a href="registro.html"
-                                    class="text-decoration-none text-secondary fw-bold">Registrarme</a>
-                            </div>
-                        </div>
-                        <div class="p-3">
-                            <div class="border-bottom text-center " id="div-o">
-                                <span class=" bg-white px-3">o</span>
-                            </div>
-                        </div>
-                        <a href="https://www.google.com/?hl=es">
-                            <div class="btn d-flex gap-2 justify-content-center border mt-3 shadow-sm">
-                                <img src="/images/google.png" alt="google icon" id="googleicon">
-                                <div class="fw-semibold text-secondary ">Continuar con Google</div>
-                            </div>
-                        </a>
-                    </div>
-
-                </div>
-
+        <div class="container2">
+          <div class="card">
+            <div class="imgBx">
+              <img src="/images/kimono malibu.jpg" alt="remeraMalibuAmarilla">
             </div>
+            <div class="contentBx">
+              <h2>Malibu</h2>
+              <div class="size">
+                <h3>Size:</h3>
+                <span>S</span>
+                <span>M</span>
+                <span>L</span>
+                <span>XL</span>
+              </div>
+              <a href="detalleProducto.html"><button type="button" class="item-button addToCart comprarButtonIndex">
+                  Comprar
+                </button></a>
+            </div>
+          </div>
         </div>
+        <div class="container2">
+          <div class="card">
+            <div class="imgBx">
+              <img src="/images/testing.png" alt="remeraTyrwhitt">
+            </div>
+            <div class="contentBx">
+              <h2>Tyrwhitt</h2>
+              <div class="size">
+                <h3>Size:</h3>
+                <span>S</span>
+                <span>M</span>
+                <span>L</span>
+                <span>XL</span>
+              </div>
+              <a href="#"><button type="button" class="item-button addToCart comprarButtonIndex">
+                  Comprar
+                </button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <br>
+      <hr>
     </div>
 
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+
+  </main>
+
+  <footer>
+    <div class="container-fluid text-center ">
+      <div class="row p-3 pb-2 bg-dark bg-opacity-25 text-white">
+        <div class=" col-md-4 pb-4">
+          <h5>Soporte</h5>
+          <div class="mb-3"> <a class="text-white text-decoration-none" href="/html/404.html" target="_blank">Centro de
+              ayuda</a> </div>
+          <div class="mb-3"> <a class="text-white text-decoration-none" href="/html/404.html"
+              target="_blank">Importaciones</a> </div>
+          <div class="mb-3"> <a class="text-white text-decoration-none" href="/html/404.html" target="_blank">Chat de
+              asistencia</a> </div>
+        </div>
+        <div class=" col-md-4 pb-4">
+          <h3>Cobra Kai</h3>
+          <p class="">Gral. Paz 576, San Miguel de Tucuman 4000</p>
+          <div class="row d-flex justify-content-evenly px-sm-5 px-md-0"> <a href="https://www.facebook.com/"
+              class="btn  col-2 rounded-pill   " target="_blank"><img src="/images/facebook.png"
+                alt="enlace a facebook"></a>
+            <a href="https://www.instagram.com/" class="btn  col-2 rounded-pill  " target="_blank"><img
+                src="/images/instagram.png" alt="enlace a instagram"></a>
+            <a href="https://ar.linkedin.com/" class="btn  col-2 rounded-pill  " target="_blank"><img
+                src="/images/linkedin.png" alt="enlace a linkedin"></a>
+            <a href="https://twitter.com/home" class="btn  col-2 rounded-pill  " target="_blank"><img
+                src="/images/twitter.png" alt="enlace a twitter"></a>
+          </div>
+        </div>
+        <div class=" col-md-4 pb-4">
+          <h5>Enlaces</h5>
+          <div class="mb-3"> <a class="text-white text-decoration-none" href="/html/404.html" target="_blank">Terminos y
+              condiciones</a> </div>
+          <div class="mb-3"> <a class="text-white text-decoration-none" href="/html/404.html" target="_blank">Politica
+              de privacidad</a> </div>
+          <div class="mb-3"> <a class="text-white text-decoration-none" href="/html/404.html" target="_blank">Noticias
+              tecnologicas</a> </div>
+        </div>
+        <div>
+          <p class="text-white  d-flex align-items-center justify-content-center"><img src="/images/copyright.png"
+              alt="logo copyright">Copyright - All rights reserved 2023</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!----------------------------------------MODAL----------------------------------------------- -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog ">
+      <div class="modal-content">
+        <div class="modal-body p-2 rounded-3 d-flex justify-content-center align-items-center flex-column vh=100 "
+          id="modal">
+          <div class="position-absolute top-0 end-0 ">
+            <button type="button" class="btn-close mt-3 me-4 bg-white " data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+          <div class=" bg-white p-3 rounded-3 text-secondary shadow-sm m-3 w-75">
+            <div class="d-flex justify-content-center ">
+              <img src="/images/iron.png" alt="login icon" id="loginimagen">
+            </div>
+
+            <div class="text-center fs-1 fw-bold">Login</div>
+            <form id="formularioLog">
+
+                <div class="input-group mt-1">
+                  <div class="input-group-text">
+                    <img src="/images/user2.png" alt="password icon" id="user">
+                  </div>
+                  <input class="form-control" type="text" placeholder="Ingrese su email" id="loginUsuario" maxlength="30">
+                </div>
+
+                <div class="input-group mt-1">
+                  <div class="input-group-text">
+                    <img src="/images/password.png" alt="password icon" id="password" maxlength="30">
+                  </div>
+                  <input class="form-control" type="password" placeholder="Contraseña" id="loginContrasena">
+                </div>
+                <div class="row mb-4">
+                  <div class="col d-flex justify-content-center">
+                    <!-- Checkbox -->
+                    <div class="form-check mt-3">
+                      <input class="form-check-input" type="checkbox" value="" id="form2Example34">
+                      <label class="form-check-label" for="form2Example34"> Recordar </label>
+                    </div>
+                  </div>
+
+                  <div class="col mt-3">
+                    <a href="#" class="text-decoration-none  text-secondary fw-semibold fst-italic pt-1"
+                      id="contrasena">¿Olvidaste tu contraseña?</a>
+                  </div>
+                </div>
+                <div class="btn d-grid gap-2 col-6 mx-auto text-white w-50  mt-2 fw-semibold shadow-sm" type="submit"
+                  id="iniciarsesion">
+                  <button type="submit" class="btn btn-danger btn-sm p-2" id="btnIniciarSesion">iniciar sesion</button>
+                </div>
+            </form>
+            <div class="d-flex flex-column align-items-center mt-2 ">
+              <div>¿No tienes una cuenta?</div>
+              <div>
+                <a href="registro.html" class="text-decoration-none text-secondary fw-bold">Registrarme</a>
+              </div>
+            </div>
+            <div class="p-3">
+              <div class="border-bottom text-center " id="div-o">
+                <span class=" bg-white px-3">o</span>
+              </div>
+            </div>
+            <a href="https://www.google.com/?hl=es">
+              <div class="btn d-flex gap-2 justify-content-center border mt-3 shadow-sm">
+                <img src="/images/google.png" alt="google icon" id="googleicon">
+                <div class="fw-semibold text-secondary ">Continuar con Google</div>
+              </div>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-        crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-        crossorigin="anonymous"
-      ></script>
-      <script src="/js/index.js"></script>
-      <script src="js/login.js" type="module"></script>
-      <script src="js/vanilla-tilt.min.js"></script>
-      <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-      <script
-        src="https://kit.fontawesome.com/cae5aa21ab.js"
-        crossorigin="anonymous"
-      ></script>
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+  <script src="/js/index.js"></script>
+  <script src="js/login.js" type="module"></script>
+  <script src="js/vanilla-tilt.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://kit.fontawesome.com/cae5aa21ab.js" crossorigin="anonymous"></script>
+  <script src="/js/login.js"></script>
+  <script src="/js/registro.js"></script>
 </body>
 
 </html>
