@@ -4,15 +4,10 @@ main{
     text-align: center;
     padding: 50px;
   }
-
-  h1 {
-    font-size: 36px;
-    color: #ecf00be8;
-  }
-
   p {
     font-size: 18px;
     color: #ffdfdf;
+    
   }
   .volver{
     background-color: gold;
@@ -35,7 +30,14 @@ main{
  .tituloerror{
   text-align: center;
   color: firebrick;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   }
   blockquote {
     color: beige;
   }
+img{
+  border-radius: 2%;
+}
+.frase{
+  color: #ffffff;
+}
