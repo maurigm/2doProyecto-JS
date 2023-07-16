@@ -37,11 +37,11 @@ clonando el repositorio
 ------------
 
 ##Integrantes del Proyecto 👩‍💻👨‍💻
-- Mauricio
-- Jhonatan
-- Luciana
-- Lautaro
-- Sofia
+- Mauricio Muñoz
+- Jhonatan Gomez
+- Lucia Rivadeneira
+- Lautaro Liendo
+- Sofia Lazarte
 
 ------------
 
