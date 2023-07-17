@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-const addProductBtn = document.getElementById('add-product-btn');
-=======
 
 
 const botonAgregar = document.getElementById('add-product-btn');
->>>>>>> 3ecc8733dc410cef3eb909992001c52c5ea72767
 const modal = document.getElementById('add-product-modal');
 const botonCerrar = document.getElementsByClassName('close')[0];
 const aniadir = document.getElementById('add-product-form');
@@ -14,6 +10,7 @@ const inputNombre = document.getElementById('product-name');
 const inputPrecio =   document.getElementById('product-price');
 const inputImagen = document.getElementById('insert-image');
 const inputStock = document.getElementById('product-stock');
+const inputCategoria = document.getElementById("selectorCategoria");
 
 
 // Variable para almacenar los productos
@@ -56,6 +53,7 @@ function limpiarFormulario() {
     inputPrecio.value = '';
     inputImagen.value = '';
     inputStock.value = '';
+    inputCategoria.value = 'Seleccionar categoria';
 }
 
 // Función para activar el modo edición
@@ -68,7 +66,8 @@ function activarModoEditar(row) {
     inputPrecio.value = row.cells[2].innerHTML;
     inputImagen.value = row.cells[3].innerHTML;
     inputStock.value = row.cells[4].innerHTML;
-    
+    inputCategoria.value = row.cells[5].innerHTML
+
     modal.style.display = 'block';
 }
 
@@ -87,51 +86,64 @@ function agregarOEditar(event) {
     const productoPrecio = inputPrecio.value;
     const productoImagen = inputImagen.value;
     const productoStock = inputStock.value;
+    const productoCategoria = inputCategoria.value;
   
-    if (editar) {
-
-        filaEditar.cells[0].innerHTML = productoCodigo; 
-        filaEditar.cells[1].innerHTML = productoNombre; 
-        filaEditar.cells[2].innerHTML = productoPrecio; 
-        filaEditar.cells[3].innerHTML = productoImagen; 
-        filaEditar.cells[4].innerHTML = productoStock; 
-  
-        almacenarProductoEditado(productoCodigo, productoNombre , productoPrecio, productoImagen, productoStock)
-
-        resetearEditar();
-  
-        alert('El producto ha sido editado correctamente.');
-
+    if (productoCategoria == "Seleccionar categoria") {
+      alert(`No te olvides de seleccionar la categoria del producto!`)
     } else {
-      const newRow = tablaProductos.insertRow();
+      if (editar) {
   
-      const celdaCodigo = newRow.insertCell(0);
-      const celdaNombre = newRow.insertCell(1);
-      const celdaPrecio = newRow.insertCell(2);
-      const celdaImagen = newRow.insertCell(3);
-      const celdaStock = newRow.insertCell(4);
-      
-      celdaCodigo.innerHTML = productoCodigo;      
-      celdaNombre.innerHTML = productoNombre;      
-      celdaPrecio.innerHTML = productoPrecio;
-      celdaImagen.innerHTML = productoImagen;      
-      celdaStock.innerHTML = productoStock;
-
-
-      const celdaBotones = newRow.insertCell(5);
-      celdaBotones.innerHTML = `
-      <button class="btn btn-outline-warning btn-sm" onclick="activarModoEditar(this.parentNode.parentNode)">Editar</button>
-      <button class="btn btn-outline-danger btn-sm" onclick="eliminarProducto(this.parentNode)">Eliminar</button>
-        <span class="favorite-btn" onclick="favorito(this)">&#9734;</span>
-      `;
+          filaEditar.cells[0].innerHTML = productoCodigo; 
+          filaEditar.cells[1].innerHTML = productoNombre; 
+          filaEditar.cells[2].innerHTML = productoPrecio; 
+          filaEditar.cells[3].innerHTML = productoImagen; 
+          filaEditar.cells[4].innerHTML = productoStock;
+          filaEditar.cells[5].innerHTML = productoCategoria; 
+    
+          almacenarProductoEditado(productoCodigo, productoNombre , productoPrecio, productoImagen, productoStock,productoCategoria)
   
-      nuevoProducto(productoCodigo, productoNombre, productoPrecio, productoImagen, productoStock);
+          resetearEditar();
+    
+          alert('El producto ha sido editado correctamente.');
   
-      alert('El producto ha sido agregado correctamente.');
+      } else {
+        
+        crearFila(productoCodigo, productoNombre, productoPrecio, productoImagen, productoStock, productoCategoria);
+    
+        nuevoProducto(productoCodigo, productoNombre, productoPrecio, productoImagen, productoStock , productoCategoria);
+    
+        alert('El producto ha sido agregado correctamente.');
+      }
+    
+      limpiarFormulario();
+      cerrarModal();
     }
+}
+
+
+function crearFila(a,b,c,d,e,f) {
+  const newRow = tablaProductos.insertRow();
   
-    limpiarFormulario();
-    cerrarModal();
+  const celdaCodigo = newRow.insertCell(0);
+  const celdaNombre = newRow.insertCell(1);
+  const celdaPrecio = newRow.insertCell(2);
+  const celdaImagen = newRow.insertCell(3);
+  const celdaStock = newRow.insertCell(4);
+  const celdaCategoria = newRow.insertCell(5);
+  
+  celdaCodigo.innerHTML = a;      
+  celdaNombre.innerHTML = b;      
+  celdaPrecio.innerHTML = c;
+  celdaImagen.innerHTML = d;      
+  celdaStock.innerHTML = e;
+  celdaCategoria.innerHTML = f;
+
+  const celdaBotones = newRow.insertCell(6);
+  celdaBotones.innerHTML = `
+  <button class="btn btn-outline-warning btn-sm" onclick="activarModoEditar(this.parentNode.parentNode)">Editar</button>
+  <button class="btn btn-outline-danger btn-sm" onclick="eliminarProducto(this.parentNode.parentNode)">Eliminar</button>
+  <span class="favorite-btn" onclick="favorito(this)">&#9734;</span>
+  `;
 }
 
 // Función para eliminar un producto
@@ -193,15 +205,17 @@ const tablaInicio = () => {
     const celdaPrecio = newRow.insertCell(2);
     const celdaImagen = newRow.insertCell(3);
     const celdaStock = newRow.insertCell(4);
+    const celdaCategoria =  newRow.insertCell(5);
 
     celdaCodigo.innerHTML = producto.id;
     celdaNombre.innerHTML = producto.nombre;
     celdaPrecio.innerHTML = producto.precio;
     celdaImagen.innerHTML = producto.imagen;
     celdaStock.innerHTML = producto.stock;
+    celdaCategoria.innerHTML = producto.categoria;
 
 
-    const celdaBotones = newRow.insertCell(5);
+    const celdaBotones = newRow.insertCell(6);
     celdaBotones.innerHTML = `
     <button class="btn btn-warning btn-sm my-1" onclick="activarModoEditar(this.parentNode.parentNode)">Editar</button>
     <button class="btn btn-danger btn-sm" onclick="eliminarProducto(this.parentNode.parentNode)">Eliminar</button>
@@ -214,24 +228,24 @@ const tablaInicio = () => {
 
 
 // Funcion para almacenar nuevos productos
-const nuevoProducto = (idProducto, nombreProducto, precioProducto, imagenProducto, stockProducto) =>{
+const nuevoProducto = (idProducto, nombreProducto, precioProducto, imagenProducto, stockProducto, productoCategoria) =>{
   const nuevo = {
     id: idProducto,
     nombre: nombreProducto,
     precio: precioProducto,
     imagen: imagenProducto,
     stock: stockProducto,
+    categoria : productoCategoria,
   };
   productos.push(nuevo);
 
   let productosString = JSON.stringify(productos)
   localStorage.setItem("productos", productosString);
 }
-// objeto (id, nombre, precio, imagen, stock)
 
 
 // Funcion para almacenar productos editados
-const almacenarProductoEditado = (idProducto, nombreProducto, precioProducto, imagenProducto, stockProducto) =>{
+const almacenarProductoEditado = (idProducto, nombreProducto, precioProducto, imagenProducto, stockProducto, productoCategoria) =>{
 
   for (const producto of productos) {
     if (producto.id == idProducto){
@@ -239,6 +253,7 @@ const almacenarProductoEditado = (idProducto, nombreProducto, precioProducto, im
       producto.precio = precioProducto;
       producto.imagen = imagenProducto;
       producto.stock = stockProducto;
+      producto.categoria = productoCategoria;
     }
   }
 
