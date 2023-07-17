@@ -172,14 +172,7 @@
     transition-delay: 0.75s;
   }
   
-  body {
-    overflow-x: hidden;
-    background-image: url(/images/dojo\ definitivo.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-  }
+
   div.columns.image {
     text-align: center;
   }
@@ -302,7 +295,7 @@
   }
   .containerc {
     position: fixed;
-    background-image: url(/images/cobra\ kai\ upload\.jpg);
+    background-image: url(/images/cobra\ kai\ upload.jpg);
     color: #fff;
     width: 100%;
     z-index: 100000;
