@@ -217,8 +217,8 @@ const tablaInicio = () => {
 
     const celdaBotones = newRow.insertCell(6);
     celdaBotones.innerHTML = `
-    <button class="btn btn-warning btn-sm my-1" onclick="activarModoEditar(this.parentNode.parentNode)">Editar</button>
-    <button class="btn btn-danger btn-sm" onclick="eliminarProducto(this.parentNode.parentNode)">Eliminar</button>
+    <button class="btn btn-outline-warning btn-sm my-1" onclick="activarModoEditar(this.parentNode.parentNode)">Editar</button>
+    <button class="btn btn-outline-danger btn-sm" onclick="eliminarProducto(this.parentNode.parentNode)">Eliminar</button>
     <span class="favorite-btn" onclick="favorito(this)">&#9734;</span>
     `;
   }

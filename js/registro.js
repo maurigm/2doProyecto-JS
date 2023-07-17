@@ -5,28 +5,18 @@ let datosUser = JSON.parse (localStorage.getItem("userDatos"));
 // datosUser.push(datosAdmin);
 // localStorage.setItem('userDatos', JSON.stringify(datosUser));
 
-//objetos usuario (5) [{…}, {…}, {…}, {…}, {…}]
-// 0
-// :
-// {nombre: 'admin', apellido: 'istrador', email: 'ninjaAdmin@gmail.com', contrasena: 'Ninja1234', administrador: 0}
-// 1
-// :
-// {nombre: 'lautaro', apellido: 'liendo', email: 'liendolautaro@gmail.com', contrasena: 'Hola12', administrador: 1}
-// 2
-// :
-// {nombre: 'lionel', apellido: 'messi', email: 'lioMessi@gmail.com', contrasena: 'Hola12', administrador: 1}
-// 3
-// :
-// {nombre: 'john', apellido: 'travolta', email: 'johnT@gmail.com', contrasena: 'Hola12', administrador: 1}
-// 4
-// :
-// {nombre: 'Mauro', apellido: 'Lombardo', email: 'mauroLombardo@gmail.com', contrasena: 'Hola12', administrador: 1}
-// length
-// :
-// 5
-// [[Prototype]]
-// :
-// Array(0)
+//usuario = [
+
+// {nombre: 'admin', apellido: 'istrador', email: 'ninjaAdmin@gmail.com', contrasena: 'Ninja1234', administrador: 0},
+// {nombre: 'lautaro', apellido: 'liendo', email: 'liendolautaro@gmail.com', contrasena: 'Hola12', administrador: 1},
+// {nombre: 'lionel', apellido: 'messi', email: 'lioMessi@gmail.com', contrasena: 'Hola12', administrador: 1},
+// {nombre: 'john', apellido: 'travolta', email: 'johnT@gmail.com', contrasena: 'Hola12', administrador: 1},
+// {nombre: 'Mauro', apellido: 'Lombardo', email: 'mauroLombardo@gmail.com', contrasena: 'Hola12', administrador: 1},
+//]
+// localStorage.setItem('userDatos', JSON.stringify(usuario));
+
+// Administrador : ninjaAdmin@gmail.com
+// password : Ninja1234
 
 console.log(datosUser);
 

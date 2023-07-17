@@ -40,16 +40,16 @@ if (sesion === null) {
 const crearCards = (lista) => {
     for (const producto of lista) {
     contenedorCards.innerHTML += `
-                <div class="card col-11 col-sm-7 col-md-5 col-lg-4 col-xl-3 my-3 mx-2 p-0 bg-black  bg-gradient bg-opacity-75">
-                    <div class="card-body text-center text-light">
-                        <h4 class="card-title fw-bold ">${producto.nombre}</h4>
+                <div class="card col-11 col-sm-7 col-md-5 col-lg-4 col-xl-3 my-3 mx-2 p-0 bg-black bg-opacity-75">
+                    <div class="card-body text-center text-light movimientoCard">
+                        <h4 class="card-title fw-bold">${producto.nombre}</h4>
                         <p class="card-text m-0">$${producto.precio}</p>
                         <p class="card-text fw-bold  m-0">3 cuotas sin interes</p>
                         <p class="card-text   m-0">${(producto.precio)/3}</p>
                     </div>
                     <img src="${producto.imagen}" class="card-img" alt="imagen de ${producto.nombre}">
-                    <div class="my-3 d-flex justify-content-center">
-                        <a href="#" class="btn btn-outline-light rounded-pill mx-2" onclick="aniadirAlCarrito(this)" >+ Carrito</a>
+                    <div class="my-3 mt-5 d-flex justify-content-center">
+                        <a class="btn btn-outline-light rounded-pill mx-2" onclick="aniadirAlCarrito(this)" >+ Carrito</a>
                         <a href="/html/detalleProducto.html" class="btn btn-outline-light rounded-pill mx-2" onclick="infoProducto(this)">+ Info</a>
                     </div>
                 </div>
@@ -106,8 +106,9 @@ const filtrarCategorias = () => {
 
 const mostrarCategoria = () => {
     let listaNueva = listaProductos;
+
     contenedorCards.innerHTML = ``;
-    if (selectorCategoria.value !== "ver todos los productos" ) {
+    if (selectorCategoria.value !== "Ver todos los productos" ) {
         listaNueva = filtrarCategorias();
     }
     crearCards(listaNueva);
@@ -140,16 +141,16 @@ const almacenarDatos = (nombreP , precioP) => {
 }
 
 const aniadirAlCarrito = (e) => {
-
-    if (sesion === "cerrado" ) {
-        alert(`Para añadir productos al carrito debe iniciar sesion`)
-    } else {
+    
+   if (sesion === "cerrado" ) {
+       alert(`Para añadir productos al carrito debe iniciar sesion`)
+   } else {
         let nombreAAgregar = e.parentElement.previousElementSibling.previousElementSibling.children[0].innerHTML;
         let precioAAgregarString = e.parentElement.previousElementSibling.previousElementSibling.children[1].innerHTML;
         let precioAAgregar = parseInt(precioAAgregarString.replace("$", "")) 
         
         almacenarDatos (nombreAAgregar , precioAAgregar);
-    }
+   }
 };
 
 
@@ -167,7 +168,7 @@ const crearCardsModal = (lista) => {
                             <div class=" bg-dark bg-opacity-50 card mb-3">
                                 <div class="row g-0 d-flex align-items-center justify-content-around">
                                     <div class="col-md-6">
-                                        <img src="/images/testing.png" class="img-fluid rounded-start" alt="...">
+                                        <img src="${producto.imagen}" class="img-fluid rounded-start" alt="...">
                                     </div>
                                     <div class="col-md-5">
                                         <div class="card-body p-0 text-center">

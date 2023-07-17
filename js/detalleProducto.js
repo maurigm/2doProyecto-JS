@@ -5,7 +5,6 @@
 
 const contenedorImagen = document.getElementById("contenedorImagen");
 const nombre = document.getElementById("nombre");
-const contenedocodigorImagen = document.getElementById("codigo");
 const precio = document.getElementById("precio");
 const aniadirAlCarrito = document.getElementById("aniadirAlCarrito");
 const busqueda = document.getElementById("busqueda");
@@ -47,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     nombre.textContent = objetoProducto.nombre;
     precio.textContent = objetoProducto.precio;
-    contenedocodigorImagen.innerHTML = `<img src="${objetoProducto.imagen}" class="d-block w-100 rounded-3" alt="imagen de ${objetoProducto.nombre}">`
+    contenedorImagen.innerHTML= `<img src="${objetoProducto.imagen}" class="d-block w-100 rounded-3" alt="imagen de ${objetoProducto.nombre}">`;
 
 });
 
@@ -104,7 +103,7 @@ const crearCardsModal = (lista) => {
                             <div class=" bg-dark bg-opacity-50 card mb-3">
                                 <div class="row g-0 d-flex align-items-center justify-content-around">
                                     <div class="col-md-6">
-                                        <img src="/images/testing.png" class="img-fluid rounded-start" alt="...">
+                                        <img src="${producto.imagen}"  class="img-fluid rounded-start" alt="...">
                                     </div>
                                     <div class="col-md-5">
                                         <div class="card-body p-0 text-center">
