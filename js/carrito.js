@@ -29,7 +29,11 @@
 // AQUI COMIENZA EL CODIGO DEL CARRITO
 
 let listaCarrito = JSON.parse(localStorage.getItem("productosCarrito"));
-console.log(listaCarrito);
+
+if (listaCarrito === null) {
+    listaCarrito = [];
+}
+
 
 const tabla = document.getElementById("cuerpoTabla");
 const seguirComprando = document.getElementById("seguirComprando")
@@ -42,9 +46,9 @@ const tablaInicio = () => {
                                 <td>${producto.nombre}</td>
                                 <td>$${producto.precio}</td>
                                 <td class="d-flex justify-content-evenly align-items-center">
-                                    <button class="btn btn-success" onclick = "decremento(this)" type="button">-</button>
+                                    <button class="btn btn-danger" onclick = "decremento(this)" type="button">-</button>
                                     <p class="px-2">${producto.cantidad}</p>
-                                    <button class="btn btn-danger" onclick = "incremento(this)" type="button">+</button>
+                                    <button class="btn btn-success" onclick = "incremento(this)" type="button">+</button>
                                 </td>
                                 <td>$${(producto.precio*producto.cantidad)}</td>
                                 <td>
@@ -86,6 +90,7 @@ const incremento = (e) => {
     e.parentElement.nextElementSibling.textContent = `$ ${productoAModificar.cantidad * productoAModificar.precio}`;
     tabla.deleteRow((tabla.rows).length-1)
     crearPieDeTabla();
+    almacenar();
 }
 
 
@@ -103,6 +108,7 @@ const decremento = (e) => {
         e.parentElement.nextElementSibling.textContent =`$ ${productoAModificar.cantidad * productoAModificar.precio}`;
         tabla.deleteRow((tabla.rows).length-1)
         crearPieDeTabla();
+        almacenar();
     }
 }
 
@@ -115,7 +121,7 @@ const borrar = (e) => {
     e.parentElement.parentElement.remove();
     tabla.deleteRow((tabla.rows).length-1);
     crearPieDeTabla();
-    console.log(listaCarrito);
+    almacenar();
 }
 
 
@@ -139,13 +145,11 @@ const montoTotal = () => {
     return total;
 }
 
-const almacenar = (e) => {
-    let listaCarritoString = JSON.stringify(listaCarrito)
-    console.log(listaCarritoString);
+const almacenar = () => {
+    let listaCarritoString = JSON.stringify(listaCarrito);
     localStorage.setItem("productosCarrito", listaCarritoString);
 }
 
-console.log(listaCarrito);
 seguirComprando.addEventListener("click", almacenar);
 
 vaciarCarrito.addEventListener("click", (e) => {

@@ -160,9 +160,7 @@ const aniadirAlCarrito = (e) => {
 const crearCardsModal = (lista) => {
     modalBusqueda.innerHTML = ``;
 
-    if (inputBusqueda.value.trim() == "") {
-        modalBusqueda.innerHTML = `<h3 class="text-center fw-bold">No hay informacion para buscar productos!</h3>`;
-    } else {
+    
         
         for (const producto of lista) {
             modalBusqueda.innerHTML += `
@@ -182,18 +180,26 @@ const crearCardsModal = (lista) => {
                                 </div>
                             </div>`;  
         }
-    }
+    
 };
 
 
 const buscarProductos = () => {
     let arrayNuevo = [];
-    for (const prod of productos){
-        if(prod.nombre.includes(inputBusqueda.value)){
-            arrayNuevo.push(prod)
-        }; 
+    if (inputBusqueda.value.trim() == "") {
+        modalBusqueda.innerHTML = `<h3 class="text-center text-black fw-bold">No hay informacion para buscar productos!</h3>`;
+    } else {
+        for (const prod of listaProductos){
+            if(prod.nombre.includes(inputBusqueda.value)){
+                arrayNuevo.push(prod)
+            }; 
+        }
+        if (arrayNuevo.length == 0) {
+            modalBusqueda.innerHTML = `<h3 class="text-center text-black fw-bold">No se encontro ningun producto, lo sentimos mucho!</h3>`;
+        } else {
+            crearCardsModal(arrayNuevo);
+        }
     }
-    crearCardsModal(arrayNuevo);
 }
 
 
@@ -223,8 +229,7 @@ const infoProductoBuscado = (e) => {
 
 document.addEventListener("DOMContentLoaded", () => {
     if (listaProductos.length == 0) {
-        contenedorCards.innerHTML += `<h2>
-                            <td colspan="5">No hay productos para mostrar
+        contenedorCards.innerHTML += `<h2 class="text-center fw-bold">No hay productos para mostrar aun, estamos trabajando en eso!
                         </h2>`
     } else {
         crearCards(listaProductos);

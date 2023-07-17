@@ -1,19 +1,43 @@
-body {
-    background-color: #000000;
+main{
+    background-color: rgb(31, 30, 30);
     font-family: Arial, sans-serif;
     text-align: center;
     padding: 50px;
   }
-
-  h1 {
-    font-size: 36px;
-    color: #fbff14e8;
-  }
-
   p {
     font-size: 18px;
     color: #ffdfdf;
+    
   }
   .volver{
     background-color: gold;
   }
+
+  #colorbtn{
+    background-color: rgb(241, 229, 50);
+  }
+  #colorbtn {
+    background-color: #ffffff;
+    color: #000000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  #colorbtn:hover {
+    background-color: #e7da1b;
+    color: #bd1717;
+  }
+  
+ .tituloerror{
+  text-align: center;
+  color: firebrick;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  blockquote {
+    color: beige;
+  }
+img{
+  border-radius: 2%;
+}
+.frase{
+  color: #ffffff;
+}
