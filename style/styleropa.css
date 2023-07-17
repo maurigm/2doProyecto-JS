@@ -20,10 +20,16 @@ hr {
 
 body {
   overflow-x: hidden;
+  background-image: url(/images/dojo\ definitivo.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
 }
 
+
 .texto {
-  color: #394d3d;
+  color: white;
 }
 
 button {
@@ -114,6 +120,17 @@ button {
 .card:hover .card-img {
   transform: translateY(-65%);
   transition: 0.5s;
+}
+.textfooter{
+  color: #EEE229;
+}
+
+.iconos
+{
+  width: 40px;
+}
+.iconos2{
+  width: 1rem;
 }
 
 

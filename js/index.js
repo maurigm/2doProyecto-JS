@@ -107,7 +107,7 @@ const filtrarCategorias = () => {
 const mostrarCategoria = () => {
     let listaNueva = listaProductos;
     contenedorCards.innerHTML = ``;
-    if (selectorCategoria.value !== "vertodos los productos" ) {
+    if (selectorCategoria.value !== "ver todos los productos" ) {
         listaNueva = filtrarCategorias();
     }
     crearCards(listaNueva);
@@ -229,7 +229,7 @@ const infoProductoBuscado = (e) => {
 
 document.addEventListener("DOMContentLoaded", () => {
     if (listaProductos.length == 0) {
-        contenedorCards.innerHTML += `<h2 class="text-center fw-bold">No hay productos para mostrar aun, estamos trabajando en eso!
+        contenedorCards.innerHTML += `<h2 class="text-center text-white fw-bold">No hay productos para mostrar aun, estamos trabajando en eso!
                         </h2>`
     } else {
         crearCards(listaProductos);
