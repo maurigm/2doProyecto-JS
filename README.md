@@ -38,12 +38,17 @@ clonando el repositorio
 
 ##Integrantes del Proyecto 👩‍💻👨‍💻
 - Mauricio Muñoz
-- Jhonatan Gomez
+- Jonathan Gomez
 - Lucia Rivadeneira
 - Lautaro Liendo
 - Sofia Lazarte
 
 ------------
+
+## Ingreso Administrador
+
+- AdminUser : ninjaAdmin@gmail.com
+- password : Ninja1234
 
 
 
