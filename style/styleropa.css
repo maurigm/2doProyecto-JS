@@ -174,17 +174,22 @@
   
   body {
     overflow-x: hidden;
+    background-image: url(/images/dojo\ definitivo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
   }
   div.columns.image {
     text-align: center;
   }
   .proximamente {
     text-align: center;
-    color: #040404;
+    color: #f7f1f1;
   }
   
   .texto {
-    color: #394d3d;
+    color: #eef7f0;
   }
   .section-container {
     --bs-gutter-x: 1.5rem;
@@ -227,7 +232,6 @@
     height: 100vh;
     overflow: hidden;
     margin: 0;
-    background: #f9f9f9;
   }
   button {
     flex-direction: row;
@@ -296,7 +300,6 @@
     color: #ffffff;
     transform: translateY(-5px) scale(1.05);
   }
-
   .containerc {
     position: fixed;
     background-image: url(/images/cobra\ kai\ upload\.jpg);
@@ -307,9 +310,7 @@
     display: flex; 
     top: 0;
     left: 0;
-
   }
-  
   /* estilo de carga de la pagina */
   
   .preloader {
@@ -345,8 +346,6 @@
     transform: translateY(-100%);
     transition: 2s;
   }
-
-  
   /* mkeyframes */
   
   @keyframes rotate {
