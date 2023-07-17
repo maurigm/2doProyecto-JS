@@ -1,35 +1,39 @@
 
 
-let productosCarritoAlmacenados = [];
+// let productosCarritoAlmacenados = [];
 
-class Productos {
-    constructor(nombre, precio, cantidad=1,){
-        this.nombre = nombre
-        this.precio = precio
-        this.cantidad = cantidad
-    }
-}
-
-
-let remera = new Productos("Remera",200);
-productosCarritoAlmacenados.push(remera);
-let ambo = new Productos("Ambo",800);
-productosCarritoAlmacenados.push(ambo);
-let pantalon = new Productos("Pantalon",400);
-productosCarritoAlmacenados.push(pantalon);
-let campera = new Productos("Campera",600);
-productosCarritoAlmacenados.push(campera);
+// class Productos {
+//     constructor(nombre, precio, cantidad=1,){
+//         this.nombre = nombre
+//         this.precio = precio
+//         this.cantidad = cantidad
+//     }
+// }
 
 
-const productosAlmacenarString = JSON.stringify(productosCarritoAlmacenados);
+// let remera = new Productos("Remera",200);
+// productosCarritoAlmacenados.push(remera);
+// let ambo = new Productos("Ambo",800);
+// productosCarritoAlmacenados.push(ambo);
+// let pantalon = new Productos("Pantalon",400);
+// productosCarritoAlmacenados.push(pantalon);
+// let campera = new Productos("Campera",600);
+// productosCarritoAlmacenados.push(campera);
 
-localStorage.setItem("productosCarrito", productosAlmacenarString);
+
+// const productosAlmacenarString = JSON.stringify(productosCarritoAlmacenados);
+
+// localStorage.setItem("productosCarrito", productosAlmacenarString);
 
 
 // AQUI COMIENZA EL CODIGO DEL CARRITO
 
 let listaCarrito = JSON.parse(localStorage.getItem("productosCarrito"));
-console.log(listaCarrito);
+
+if (listaCarrito === null) {
+    listaCarrito = [];
+}
+
 
 const tabla = document.getElementById("cuerpoTabla");
 const seguirComprando = document.getElementById("seguirComprando")
@@ -86,6 +90,7 @@ const incremento = (e) => {
     e.parentElement.nextElementSibling.textContent = `$ ${productoAModificar.cantidad * productoAModificar.precio}`;
     tabla.deleteRow((tabla.rows).length-1)
     crearPieDeTabla();
+    almacenar();
 }
 
 
@@ -103,6 +108,7 @@ const decremento = (e) => {
         e.parentElement.nextElementSibling.textContent =`$ ${productoAModificar.cantidad * productoAModificar.precio}`;
         tabla.deleteRow((tabla.rows).length-1)
         crearPieDeTabla();
+        almacenar();
     }
 }
 
@@ -115,7 +121,7 @@ const borrar = (e) => {
     e.parentElement.parentElement.remove();
     tabla.deleteRow((tabla.rows).length-1);
     crearPieDeTabla();
-    console.log(listaCarrito);
+    almacenar();
 }
 
 
@@ -139,13 +145,11 @@ const montoTotal = () => {
     return total;
 }
 
-const almacenar = (e) => {
-    let listaCarritoString = JSON.stringify(listaCarrito)
-    console.log(listaCarritoString);
+const almacenar = () => {
+    let listaCarritoString = JSON.stringify(listaCarrito);
     localStorage.setItem("productosCarrito", listaCarritoString);
 }
 
-console.log(listaCarrito);
 seguirComprando.addEventListener("click", almacenar);
 
 vaciarCarrito.addEventListener("click", (e) => {

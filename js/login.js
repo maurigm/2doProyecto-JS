@@ -1,10 +1,14 @@
-let sesion =(localStorage.getItem(`sesion`));
+let inicioDeSesion =(localStorage.getItem("sesion"));
 
-if (sesion === null) {
-    sesion = "cerrado";
+if (inicioDeSesion === null) {
+    inicioDeSesion = "cerrado";
 }
 
 let datosUsuariosLog = JSON.parse(localStorage.getItem(`userDatos`));
+
+if (datosUsuariosLog === null) {
+    datosUsuariosLog = [];
+}
 
 const inputEmail = document.getElementById("loginUsuario");
 const inputContrasena = document.getElementById("loginContrasena");
@@ -52,18 +56,18 @@ function comprobacionAdministrador(valor) {
     if (valor === 0) {
         mostrarLink();
         alert("bienvenido administrador");
-        sesion = "abierto administrador"
+        inicioDeSesion = "abierto administrador"
     }
     else{
         alert("ingreso exitoso");
-        sesion = "abierto usuario"
+        inicioDeSesion = "abierto usuario"
     }
-    localStorage.setItem("sesion",sesion)
+    localStorage.setItem("sesion",inicioDeSesion)
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-    if (sesion !== "cerrado") {
-        if (sesion === "abierto administrador") {
+    if (inicioDeSesion !== "cerrado") {
+        if (inicioDeSesion === "abierto administrador") {
             administracion.innerHTML = `<a class="nav-link" href="/html/administracion.html">Administracion</a>`
         }
         cerrarSesion.innerHTML = `<a class="nav-link" href="/html/index.html">Cerrar sesion</a>`
@@ -71,14 +75,10 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 cerrarSesion.addEventListener("click",()=>{
-    sesion = "cerrado"
-    localStorage.setItem("sesion",sesion)
+    inicioDeSesion = "cerrado"
+    localStorage.setItem("sesion",inicioDeSesion)
 })
 
-
-// evento recarga de pagina controlar si hay inicio de sesion
-// si hay inicio de sesion crear link cerrar sesion
-// comprobacion si es admin o no
 
 
 
