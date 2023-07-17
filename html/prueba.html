@@ -5,7 +5,7 @@
     <meta charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <link rel="stylesheet" href="/style/login.css">
-    <link rel="stylesheet" href="/style/styleropa.css">
+    <link rel="stylesheet" href="/style/prueba.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" >
         <title>Cobra Kai</title>
@@ -35,9 +35,8 @@
                         </li>
                         <form class="d-flex">
                             <input class="form-control me-2" type="search" placeholder="Buscar producto"
-                                aria-label="Search" required>
-                            <button class="btn btn-outline-ligh me-1 p-0" type="submit"><img src="/images/buscar.png"
-                                    class="iconos-navbar" alt="buscar"></button>
+                                aria-label="Search" required id="inputBusqueda">
+                            <button class="btn btn-outline-ligh me-1 p-0" type="submit" id="busqueda" data-bs-toggle="modal" data-bs-target="#encontrados"><img src="/images/buscar.png" class="iconos-navbar" alt="buscar"></button>
                         </form>
                         <li class="nav-item">
                             <a class="nav-link" href="/html/carrito.html"><img src="/images/carrito2.png"
@@ -58,168 +57,126 @@
             <div class="preloader">
               <p>Strike first Strike hard No Mercy</p>
             </div>
-          </div>
-          <div>
-            <video
-              src="/images/video inicio2.mp4"
-              autoplay
-              loop
-              class="videoFondo"
-            ></video>
-            <section class="main">
-              <div class="container">
-                <div class="row">
-                  <div class="col-sm-12 col-md-6"></div>
-                </div>
-              </div>
-            </section>
+        </div>
+        <div class="container margin">
+
+            <video src="/images/video inicio2.mp4" autoplay loop class="videoFondo"></video>
+            
             <hr >
-            <div class="section-container">
-              <div class="columns image">
-                <video
-                  src="/images/video prox.mp4"
-                  width="90%"
-                  autoplay
-                  loop
-                ></video>
-              </div>
-              <div class="columns content">
-                <div class="content-container">
-                  <h5 class="text-center text-black">Próximamente</h5>
-                  <p class="texto">
-                    ¡Presentando Cobra Kai Kimonos: tu destino para obtener conjuntos exclusivos de kimonos inspirados en la exitosa serie Cobra Kai! Próximamente en agosto de este año, nuestro emocionante eCommerce llegará para brindarte una experiencia de compra única y auténtica.
-                  </p>
-                  <p class="texto">
-                    En Cobra Kai Kimonos, nos enorgullece ofrecerte ediciones limitadas de conjuntos de ropa que capturan la esencia y el estilo de Cobra Kai. Diseñados cuidadosamente con atención a los detalles, nuestros productos te permitirán lucir como un verdadero luchador y mostrar tu pasión por la serie.
-                  </p>
-                  <p class="texto">
-                    Estamos emocionados de dar vida a Cobra Kai Kimonos y esperamos que te unas a nosotros en esta emocionante aventura. Estate atento, ¡pronto podrás explorar nuestra tienda en línea y ser uno de los pocos afortunados en poseer una de nuestras ediciones limitadas de conjuntos de kimonos!
-                  </p>
+
+            <div class="row d-flex justify-content-around my-4">
+                <div class="col-12 col-xl-6 d-flex align-items-center">
+                    <video src="/images/video prox.mp4" class="w-100" autoplay loop></video>
                 </div>
-              </div>
+                <div class="col-12 col-xl-5">
+                    <h5 class="text-center text-black fs-3 fw-bold my-3">Próximamente</h5>
+                    <p class="texto">
+                        ¡Presentando Cobra Kai Kimonos: tu destino para obtener conjuntos exclusivos de kimonos inspirados en la exitosa serie Cobra Kai! Próximamente en agosto de este año, nuestro emocionante eCommerce llegará para brindarte una experiencia de compra única y auténtica.
+                    </p>
+                    <p class="texto">
+                        En Cobra Kai Kimonos, nos enorgullece ofrecerte ediciones limitadas de conjuntos de ropa que capturan la esencia y el estilo de Cobra Kai. Diseñados cuidadosamente con atención a los detalles, nuestros productos te permitirán lucir como un verdadero luchador y mostrar tu pasión por la serie.
+                    </p>
+                    <p class="texto">
+                        Estamos emocionados de dar vida a Cobra Kai Kimonos y esperamos que te unas a nosotros en esta emocionante aventura. Estate atento, ¡pronto podrás explorar nuestra tienda en línea y ser uno de los pocos afortunados en poseer una de nuestras ediciones limitadas de conjuntos de kimonos!
+                    </p>
+                </div>
             </div>
+
             <hr>
-            <!-- <div class="contenedorCards">
-              <div class="container2">
-                <div class="card">
-                  <div class="imgBx">
-                    <img
-                      src="/images/testing.png"
-                      alt="Kimono Edicion Blanca"
-                    >
-                  </div>
-                  <div class="contentBx">
-                    <h2>Kimono Blanco</h2>
-                    <div class="size">
-                      <h3>Size:</h3>
-                      <span>S</span>
-                      <span>M</span>
-                      <span>L</span>
-                      <span>XL</span>
-                    </div>
-                    <a href="#"
-                      ><button type="button" class="item-button addToCart comprarButtonIndex">
-                        Comprar
-                      </button></a
-                    >
-                  </div>
+
+            <h3 class="text-center fw-bold fs-1 my-4">PRODUCTOS</h3>
+            <div class="row mt-3">
+                <div class="col-12 col-lg-5 text-lg-end text-center">
+                    <p class="m-0 mt-3 mt-lg-1 fw-bold">Ver productos</p>
                 </div>
-              </div>
-              <div class="container2">
-                <div class="card">
-                  <div class="imgBx">
-                    <img
-                      src="/images/testing.png"
-                      alt="remeraWestlakeVerde"
-                    >
-                  </div>
-                  <div class="contentBx">
-                    <h2>Kimono negro</h2>
-                    <div class="size">
-                      <h3>Size:</h3>
-                      <span>S</span>
-                      <span>M</span>
-                      <span>L</span>
-                      <span>XL</span>
-                    </div>
-                    <a href="#"
-                      ><button type="button" class="item-button addToCart comprarButtonIndex">
-                        Comprar
-                      </button></a
-                    >
-                  </div>
+                <div class="col-12 col-lg-5 px-5">
+                    <select class="form-select" id="selectorCategoria"  aria-label="Elegir categoria">
+                        <option selected>vertodos los productos</option>
+                        <option value="kimonos">Kimonos</option>
+                        <option value="accesorios">Accesorios</option>
+                        <option value="merchandising">Merchandising</option>
+                    </select>
                 </div>
-              </div>
-              <div class="container2">
-                <div class="card">
-                  <div class="imgBx">
-                    <img
-                      src="/images/kimono malibu.jpg"
-                      alt="remeraMalibuAmarilla"
-                    >
-                  </div>
-                  <div class="contentBx">
-                    <h2>Malibu</h2>
-                    <div class="size">
-                      <h3>Size:</h3>
-                      <span>S</span>
-                      <span>M</span>
-                      <span>L</span>
-                      <span>XL</span>
-                    </div>
-                    <a href="detalleProducto.html"
-                      ><button type="button" class="item-button addToCart comprarButtonIndex">
-                        Comprar
-                      </button></a
-                    >
-                  </div>
+                <div class="col-12 col-lg-5 text-lg-end text-center">
+                    <p class="m-0 mt-3 mt-lg-1 fw-bold">Ordenar por precio</p>
                 </div>
-              </div>
-              <div class="container2">
-                <div class="card">
-                  <div class="imgBx">
-                    <img src="/images/testing.png" alt="remeraTyrwhitt" >
-                  </div>
-                  <div class="contentBx">
-                    <h2>Tyrwhitt</h2>
-                    <div class="size">
-                      <h3>Size:</h3>
-                      <span>S</span>
-                      <span>M</span>
-                      <span>L</span>
-                      <span>XL</span>
-                    </div>
-                    <a href="#"
-                      ><button type="button" class="item-button addToCart comprarButtonIndex">
-                        Comprar
-                      </button></a
-                    >
-                  </div>
+                <div class="col-12 col-lg-5 px-5">
+                    <select class="form-select" id="ordenarPrecio" aria-label="Ordenar porprecio">
+                        <option selected>Elegir orden</option>
+                        <option value="mayoramenor">Mayor a menor</option>
+                        <option value="menoramayor">Menor a mayor</option>
+                    </select>
                 </div>
-              </div>
-            </div> -->
-            <div>
-              <div class="card" style="width: 18rem;">
-                <img src="/images/testing.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-                <div class="card-body">
-                  <a href="#" class="card-link">Card link</a>
-                  <a href="#" class="card-link">Another link</a>
-                </div>
-              </div>
             </div>
-            <hr>
-            <br >
-            <hr >
-          </div>
-
-
-
-
-
+            <div class="row d-flex justify-content-around my-4 " id="contenedorCards">
+                
+                <div class="card col-11 col-sm-7 col-md-5 col-lg-4 col-xl-3 my-3 mx-2 p-0 bg-black  bg-gradient bg-opacity-75">
+                    <div class="card-body movimientoCard text-center text-light">
+                        <h4 class="card-title fw-bold ">chaqueta</h4>
+                        <p class="card-text m-0">$213123123</p>
+                        <p class="card-text fw-bold  m-0">3 cuotas sin interes</p>
+                        <p class="card-text   m-0">$123123</p>
+                    </div>
+                    <img src="/images/testing.png" class="card-img" alt="...">
+                    <div class="my-3 d-flex justify-content-center">
+                        <a  class="btn btn-outline-light rounded-pill mx-2" onclick="aniadirAlCarrito(this)">+ Carrito</a>
+                        <a href="/html/detalleProducto.html" class="btn btn-outline-light rounded-pill mx-2">+ Info</a>
+                    </div>
+                </div>
+                <div class="card col-11 col-sm-7 col-md-5 col-lg-4 col-xl-3 my-3 mx-2 p-0 bg-black  bg-gradient bg-opacity-75">
+                    <div class="card-body movimientoCard text-center text-light">
+                        <h4 class="card-title fw-bold ">Nombre producto</h4>
+                        <p class="card-text m-0">$213123123</p>
+                        <p class="card-text fw-bold  m-0">3 cuotas sin interes</p>
+                        <p class="card-text   m-0">$123123</p>
+                    </div>
+                    <img src="/images/testing.png" class="card-img" alt="...">
+                    <div class="my-3 d-flex justify-content-center">
+                        <a href="#" class="btn btn-outline-light rounded-pill mx-2">+ Carrito</a>
+                        <a href="/html/detalleProducto.html" class="btn btn-outline-light rounded-pill mx-2">+ Info</a>
+                    </div>
+                </div>
+                <div class="card col-11 col-sm-7 col-md-5 col-lg-4 col-xl-3 my-3 mx-2 p-0 bg-black  bg-gradient bg-opacity-75">
+                    <div class="card-body movimientoCard text-center text-light">
+                        <h4 class="card-title fw-bold ">Nombre producto</h4>
+                        <p class="card-text m-0">$213123123</p>
+                        <p class="card-text fw-bold  m-0">3 cuotas sin interes</p>
+                        <p class="card-text   m-0">$123123</p>
+                    </div>
+                    <img src="/images/testing.png" class="card-img" alt="...">
+                    <div class="my-3 d-flex justify-content-center">
+                        <a href="#" class="btn btn-outline-light rounded-pill mx-2">+ Carrito</a>
+                        <a href="/html/detalleProducto.html" class="btn btn-outline-light rounded-pill mx-2">+ Info</a>
+                    </div>
+                </div>
+                <div class="card col-12 col-md-5 col-lg-4 col-xl-3 my-3 mx-2 p-0 bg-black  bg-gradient bg-opacity-75">
+                    <div class="card-body movimientoCard text-center text-light">
+                        <h4 class="card-title fw-bold ">Nombre producto</h4>
+                        <p class="card-text m-0">$213123123</p>
+                        <p class="card-text fw-bold  m-0">3 cuotas sin interes</p>
+                        <p class="card-text   m-0">$123123</p>
+                    </div>
+                    <img src="/images/testing.png" class="card-img" alt="...">
+                    <div class="my-3 d-flex justify-content-center">
+                        <a href="#" class="btn btn-outline-light rounded-pill mx-2">+ Carrito</a>
+                        <a href="/html/detalleProducto.html" class="btn btn-outline-light rounded-pill mx-2">+ Info</a>
+                    </div>
+                </div>
+                <div class="card col-12 col-md-5 col-lg-4 col-xl-3 my-3 mx-2 p-0 bg-black  bg-gradient bg-opacity-75">
+                    <div class="card-body movimientoCard text-center text-light">
+                        <h4 class="card-title fw-bold ">Nombre producto</h4>
+                        <p class="card-text m-0">$213123123</p>
+                        <p class="card-text fw-bold  m-0">3 cuotas sin interes</p>
+                        <p class="card-text   m-0">$123123</p>
+                    </div>
+                    <img src="/images/testing.png" class="card-img" alt="...">
+                    <div class="my-3 d-flex justify-content-center">
+                        <a href="#" class="btn btn-outline-light rounded-pill mx-2">+ Carrito</a>
+                        <a href="/html/detalleProducto.html" class="btn btn-outline-light rounded-pill mx-2">+ Info</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer>
@@ -265,7 +222,7 @@
         </div>
     </footer>
 
-    <!----------------------------------------MODAL----------------------------------------------- -->
+    <!----------------------------------------MODAL Login----------------------------------------------- -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog ">
             <div class="modal-content">
@@ -341,6 +298,38 @@
         </div>
     </div>
 
+<!----------------------------------------MODAL Busqueda----------------------------------------------- -->
+    <div class="modal fade" id="encontrados" tabindex="-1" aria-labelledby="productos encontrados" aria-hidden="true">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+                <div class="bg-dark bg-opacity-25 p-2 rounded-3 d-flex justify-content-center align-items-center flex-column">
+                    <div class="position-absolute top-0 end-0 ">
+                        <button type="button" class="btn-close mt-3 me-4 bg-white " data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class=" bg-dark bg-opacity-50 p-3 rounded-3 text-secondary shadow-sm m-3 w-75" id="modalBusqueda">
+                        <div class=" bg-dark bg-opacity-50 card mb-3">
+                            <div class="row g-0 d-flex align-items-center justify-content-around">
+                              <div class="col-md-6">
+                                <img src="/images/testing.png" class="img-fluid rounded-start" alt="...">
+                              </div>
+                              <div class="col-md-5">
+                                <div class="card-body p-0 text-center">
+                                  <h5 class="card-title m-0 mt-2 ">Card title</h5>
+                                  <p class="card-text m-0">Precio</p>
+                                  <p class="card-text m-0 fw-bold"> $123123</p>
+                                  <a href="/html/detalleProducto.html" class="btn btn-outline-light btn-sm rounded-pill mx-2" onclick="infoProductoBuscado(this)">+ Info</a>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
 
 
 
@@ -353,12 +342,6 @@
       ></script>
       <script src="/js/index.js"></script>
       <script src="js/login.js" type="module"></script>
-      <script src="js/vanilla-tilt.min.js"></script>
-      <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-      <script
-        src="https://kit.fontawesome.com/cae5aa21ab.js"
-        crossorigin="anonymous"
-      ></script>
 </body>
 
 </html>
