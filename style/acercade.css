@@ -1,35 +1,47 @@
+/*efectos de las cards*/
 .card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .card-img-top {
-    width: 500px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-  }
-  
-  @media (min-width: 768px) {
-     .card {
-      flex-direction: row;
-      align-items: flex-start;
-      text-align: left;
-    }
-  
-.card-img-top {
-      margin-right: 20px;
-  }
-  }
-  
-.titulo {
-    text-align: center;
-  }
-  
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  background-color: rgba(131, 133, 127, 0.5);
+}
 
+.card:hover {
+  transform: translateY(-10px);
+}
+.card:hover .card-img-top{
+ z-index: 1;
+}
+.card:hover .card-title{
+  color: black;
+ }
+ .card-title{
+  color: white;
+ }
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card-body {
+  position: relative;
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+
+/*efecto de la frase*/
 .texto {
     display: flex;
     justify-content: center;
@@ -40,6 +52,7 @@
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   } 
+  /*efecto del titulo */
 h1 {
     font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
     font-size: 92px;
@@ -123,4 +136,15 @@ h1 {
         7px 7px 0px rgba(0, 0, 0, 0.2);
     }
   }
-  
+  .titulo {
+    text-align: center;
+  }
+  .colorcuerpo{
+    background-color: #181818;
+  }
+  .tamano{
+    font-size: xx-large;
+  }
+  .colordelcuerpo{
+    background-color: #f1dc20;
+  }

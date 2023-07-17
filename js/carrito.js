@@ -1,29 +1,29 @@
 
 
-// let productosCarritoAlmacenados = [];
+let productosCarritoAlmacenados = [];
 
-// class Productos {
-//     constructor(nombre, precio, cantidad=1,){
-//         this.nombre = nombre
-//         this.precio = precio
-//         this.cantidad = cantidad
-//     }
-// }
-
-
-// let remera = new Productos("Remera",200);
-// productosCarritoAlmacenados.push(remera);
-// let ambo = new Productos("Ambo",800);
-// productosCarritoAlmacenados.push(ambo);
-// let pantalon = new Productos("Pantalon",400);
-// productosCarritoAlmacenados.push(pantalon);
-// let campera = new Productos("Campera",600);
-// productosCarritoAlmacenados.push(campera);
+class Productos {
+    constructor(nombre, precio, cantidad=1,){
+        this.nombre = nombre
+        this.precio = precio
+        this.cantidad = cantidad
+    }
+}
 
 
-// const productosAlmacenarString = JSON.stringify(productosCarritoAlmacenados);
+let remera = new Productos("Remera",200);
+productosCarritoAlmacenados.push(remera);
+let ambo = new Productos("Ambo",800);
+productosCarritoAlmacenados.push(ambo);
+let pantalon = new Productos("Pantalon",400);
+productosCarritoAlmacenados.push(pantalon);
+let campera = new Productos("Campera",600);
+productosCarritoAlmacenados.push(campera);
 
-// localStorage.setItem("productosCarrito", productosAlmacenarString);
+
+const productosAlmacenarString = JSON.stringify(productosCarritoAlmacenados);
+
+localStorage.setItem("productosCarrito", productosAlmacenarString);
 
 
 // AQUI COMIENZA EL CODIGO DEL CARRITO
@@ -42,9 +42,9 @@ const tablaInicio = () => {
                                 <td>${producto.nombre}</td>
                                 <td>$${producto.precio}</td>
                                 <td class="d-flex justify-content-evenly align-items-center">
-                                    <button class="btn btn-success" onclick = "decremento(this)" type="button">-</button>
+                                    <button class="btn btn-danger" onclick = "decremento(this)" type="button">-</button>
                                     <p class="px-2">${producto.cantidad}</p>
-                                    <button class="btn btn-danger" onclick = "incremento(this)" type="button">+</button>
+                                    <button class="btn btn-success" onclick = "incremento(this)" type="button">+</button>
                                 </td>
                                 <td>$${(producto.precio*producto.cantidad)}</td>
                                 <td>

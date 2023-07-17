@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <meta charset="UTF-8" />
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/style/login.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="/style/carrito.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
         <title>Cobra Kai</title>
     </head>
 
-    <body class="bg-dark-subtle">
+    <body class="colorfondo" id="body">
       <header>
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark bg-opacity-50 fixed-top p-0">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark  fixed-top p-0">
             <div class="container-fluid">
               <a class="navbar-brand p-0 d-flex" href="/html/index.html">
                 <img src="/images/logo cobrakai.png" style="width: 40px; height: 40px;"
                   class="d-inline-block align-items-center">
-                <h1 class="m-0 ps-2 pt-2 pt-md-0">Cobra Kai</h1>
+                <h1 class="m-0 pt-2 pt-md-0 mx-4">Cobra Kai</h1>
               </a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -51,49 +52,55 @@
             </div>
           </nav>
     </header>
-    <main>
-        <h1>CARRITO</h1>
-        <table class="table text-center">
-            <thead>
-                <tr>
-                    <th scope="col">Producto</th>
-                    <th scope="col">Precio</th>
-                    <th scope="col">cantidad</th>
-                    <th scope="col">subtotal</th>
-                    <th scope="col"></th>
-                </tr>
-            </thead>
-            <tbody id="cuerpoTabla">
-            
-            </tbody>
-        </table>
-        <div class="d-flex justify-content-evenly row">
-            <a id="seguirComprando" class="btn btn-primary col-md-3 col-10" href="/html/index.html" >Seguir comprando</a>
-            <a id="vaciarCarrito" class="btn btn-primary col-md-3 col-10" href="" >Vaciar carrito</a>
-            <a id="pagar" class="btn btn-primary col-md-3 col-10" href="/html/404.html" >Pagar</a>
+    <main class="margintop colorfondo">
+        <h1 class="mt-4 text-center">CARRITO</h1>
+        <div class="container">
+            <div class="table-responsive-sm">
+                <table class="table text-center table-secondary ">
+                    <thead>
+                        <tr class="table-dark">
+                            <th class="" scope="col">Producto</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">cantidad</th>
+                            <th scope="col">subtotal</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpoTabla">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+        <div class="d-flex justify-content-evenly row my-4 mx-4">
+            <a id="seguirComprando" class="btn btn-outline-primary col-md-2 col-10 my-1 fw-bold " href="/html/index.html" >Seguir comprando</a>
+            <a id="vaciarCarrito" class="btn btn-outline-secondary col-md-2 col-10 my-1 fw-bold" href="" >Vaciar carrito</a>
+            <a id="pagar" class="btn btn-outline-success col-md-2 col-10 my-1 fw-bold" href="/html/404.html" >Pagar</a>
         </div>
     </main>
 
-    <footer>
+    <footer class="bg-dark">
         <div class="container-fluid text-center ">
-            <div class="row p-3 pb-2 bg-dark bg-opacity-25 text-white">
+            <div class="row p-3 pb-2  text-dark">
                 <div class=" col-md-4 pb-4">
-                    <h5>Soporte</h5>
-                    <div class="mb-3">                        <a class="text-white text-decoration-none" href="/html/404.html" target="_blank">Centro de ayuda</a>                    </div>                    <div class="mb-3">                        <a class="text-white text-decoration-none" href="/html/404.html" target="_blank">Importaciones</a>                    </div>                    <div class="mb-3">                        <a class="text-white text-decoration-none" href="/html/404.html" target="_blank">Chat de asistencia</a>                        </div>                </div>
-                <div class=" col-md-4 pb-4">
-                    <h3>Cobra Kai</h3>
-                    <p class="">Gral. Paz 576, San Miguel de Tucuman 4000</p>
-                    <div class="row d-flex justify-content-evenly px-sm-5 px-md-0">                        <a href="https://www.facebook.com/" class="btn  col-2 rounded-pill   "  target="_blank"><img src="/images/facebook.png" alt="enlace a facebook"></a>
-                        <a href="https://www.instagram.com/" class="btn  col-2 rounded-pill  "  target="_blank"><img src="/images/instagram.png" alt="enlace a instagram"></a>
-                        <a href="https://ar.linkedin.com/" class="btn  col-2 rounded-pill  "  target="_blank"><img src="/images/linkedin.png" alt="enlace a linkedin"></a>
-                        <a href="https://twitter.com/home" class="btn  col-2 rounded-pill  "  target="_blank"><img src="/images/twitter.png" alt="enlace a twitter"></a>
+                    <h5 class="textfooter">Soporte</h5>
+                    <div class="mb-3">                        <a class="textfooter text-decoration-none" href="/html/404.html" target="_blank">Centro de ayuda</a>                    </div>                    <div class="mb-3">                        <a class="textfooter text-decoration-none" href="/html/404.html" target="_blank">Importaciones</a>                    </div>                    <div class="mb-3">                        <a class="textfooter text-decoration-none" href="/html/404.html" target="_blank">Chat de asistencia</a>                        </div>                </div>
+                <div class=" col-md-4 pb-4 textfooter fw-bold">
+                    <h3 class="textfooter">Cobra Kai</h3>
+                    <p class="textfooter">Gral. Paz 576, San Miguel de Tucuman 4000</p>
+                    <div class="row d-flex justify-content-evenly px-sm-5 px-md-0">
+                        <a href="https://www.facebook.com/" class="btn textfooter col-2 rounded-pill   "  target="_blank"><img src="/images/1.png" class="iconos" alt="enlace a facebook"></a>
+                        <a href="https://www.instagram.com/" class="btn textfooter col-2 rounded-pill  "  target="_blank"><img src="/images/2.png" class="iconos" alt="enlace a instagram"></a>
+                        <a href="https://ar.linkedin.com/" class="btn textfooter col-2 rounded-pill  "  target="_blank"><img src="/images/3.png" class="iconos" alt="enlace a linkedin"></a>
+                        <a href="https://twitter.com/home" class="btn textfooter col-2 rounded-pill  "  target="_blank"><img src="/images/4.png" class="iconos" alt="enlace a twitter"></a>
                     </div>                </div>
-                <div class=" col-md-4 pb-4">
+                <div class=" col-md-4 pb-4 textfooter">
                     <h5>Enlaces</h5>
-                    <div class="mb-3">                        <a class="text-white text-decoration-none" href="/html/404.html"  target="_blank">Terminos y condiciones</a>                    </div>                    <div class="mb-3">                        <a class="text-white text-decoration-none" href="/html/404.html" target="_blank">Politica de privacidad</a>                        </div>                    <div class="mb-3">                        <a class="text-white text-decoration-none" href="/html/404.html" target="_blank">Noticias tecnologicas</a>                    </div>
+                    <div class="mb-3">                        <a class=" textfooter text-decoration-none" href="/html/404.html"  target="_blank">Terminos y condiciones</a>                    </div>                    <div class="mb-3">                        <a class=" textfooter text-decoration-none" href="/html/404.html" target="_blank">Politica de privacidad</a>                        </div>                    <div class="mb-3">                        <a class=" textfooter text-decoration-none" href="/html/404.html" target="_blank">Noticias tecnologicas</a>                    </div>
                 </div>
-                <div>
-                    <p class="text-white  d-flex align-items-center justify-content-center"><img src="/images/copyright.png" alt="logo copyright">Copyright - All rights reserved 2023</p>
+                <div class="textfooter">
+                    <p class=" textfooter d-flex align-items-center justify-content-center"><img src="/images/5 (1).png" class="mx-2 iconos2" alt="logo copyright">Copyright - All rights reserved 2023</p>
                 </div>
             </div>
         </div>
@@ -115,17 +122,17 @@
                     <div class="d-flex justify-content-center ">
                       <img src="/images/iron.png" alt="login icon" id="loginimagen">
                     </div>
-        
+
                     <div class="text-center fs-1 fw-bold">Login</div>
                     <form id="formularioLog">
-        
+
                         <div class="input-group mt-1">
                           <div class="input-group-text">
                             <img src="/images/user2.png" alt="password icon" id="user">
                           </div>
                           <input class="form-control" type="text" placeholder="Ingrese su email" id="loginUsuario" maxlength="30">
                         </div>
-        
+
                         <div class="input-group mt-1">
                           <div class="input-group-text">
                             <img src="/images/password.png" alt="password icon" id="password" maxlength="30">
@@ -140,7 +147,7 @@
                               <label class="form-check-label" for="form2Example34"> Recordar </label>
                             </div>
                           </div>
-        
+
                           <div class="col mt-3">
                             <a href="#" class="text-decoration-none  text-secondary fw-semibold fst-italic pt-1"
                               id="contrasena">¿Olvidaste tu contraseña?</a>
@@ -182,8 +189,7 @@
             crossorigin="anonymous"
         ></script>
         <script src="/js/login.js"></script>
-        <script src="/js/registro.js"></script>
         <script src="html/carrito.html"></script>
-        <script src="js/adminjs.js"></script>
+
     </body>
 </html>
