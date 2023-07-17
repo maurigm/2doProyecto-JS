@@ -31,12 +31,12 @@ clonando el repositorio
 
 ## DEMO 📋
 
-- link de la pagina:
-- Ingreso como administrador: (Usuario:""  Password: "")
+- link de la pagina: https://tiendacobrakaiok.netlify.app/html/
+- Ingreso como administrador: (Usuario:"ninjaAdmin@gmail.com"  Password: "Ninja1234")
 
 ------------
 
-##Integrantes del Proyecto 👩‍💻👨‍💻
+## Integrantes del Proyecto 👩‍💻👨‍💻
 - Mauricio Muñoz
 - Jonathan Gomez
 - Lucia Rivadeneira
@@ -44,12 +44,3 @@ clonando el repositorio
 - Sofia Lazarte
 
 ------------
-
-## Ingreso Administrador
-
-- AdminUser : ninjaAdmin@gmail.com
-- password : Ninja1234
-
-
-
-
